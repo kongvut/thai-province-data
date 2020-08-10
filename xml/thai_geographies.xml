@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<RECORDS>
+	<RECORD>
+		<id>1</id>
+		<name>ภาคเหนือ</name>
+	</RECORD>
+	<RECORD>
+		<id>2</id>
+		<name>ภาคกลาง</name>
+	</RECORD>
+	<RECORD>
+		<id>3</id>
+		<name>ภาคตะวันออกเฉียงเหนือ</name>
+	</RECORD>
+	<RECORD>
+		<id>4</id>
+		<name>ภาคตะวันตก</name>
+	</RECORD>
+	<RECORD>
+		<id>5</id>
+		<name>ภาคตะวันออก</name>
+	</RECORD>
+	<RECORD>
+		<id>6</id>
+		<name>ภาคใต้</name>
+	</RECORD>
+</RECORDS>
+
