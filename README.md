@@ -14,3 +14,6 @@
 - (จังหวัด) https://raw.githubusercontent.com/kongvut/thai-province-data/master/api_province.json
 - (อำเภอ) https://raw.githubusercontent.com/kongvut/thai-province-data/master/api_amphure.json
 - (ตำบล) https://raw.githubusercontent.com/kongvut/thai-province-data/master/api_tombon.json
+
+### Demo Fetch API
+https://codesandbox.io/s/thailand-province-demo-api-k3st7
