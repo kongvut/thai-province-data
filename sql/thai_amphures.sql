@@ -1,16 +1,15 @@
 /*
-
- Source Server         : bot4k
+ Source Server         : rockpi
  Source Server Type    : MariaDB
- Source Server Version : 100515
- Source Host           : 192.168.31.11:3308
+ Source Server Version : 100808 (10.8.8-MariaDB-1:10.8.8+maria~ubu2204)
+ Source Host           : rockpi.lan:3308
  Source Schema         : thai_data
 
  Target Server Type    : MariaDB
- Target Server Version : 100515
+ Target Server Version : 100808 (10.8.8-MariaDB-1:10.8.8+maria~ubu2204)
  File Encoding         : 65001
 
- Date: 16/05/2022 13:58:46
+ Date: 21/12/2023 19:31:19
 */
 
 SET NAMES utf8mb4;
@@ -22,8 +21,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `thai_amphures`;
 CREATE TABLE `thai_amphures` (
   `id` int(11) NOT NULL,
-  `name_th` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name_en` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_th` varchar(150) NOT NULL,
+  `name_en` varchar(150) NOT NULL,
   `province_id` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
@@ -318,7 +317,7 @@ INSERT INTO `thai_amphures` (`id`, `name_th`, `name_en`, `province_id`, `created
 INSERT INTO `thai_amphures` (`id`, `name_th`, `name_en`, `province_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (3312, 'ห้วยทับทัน', 'Huai Thap Than', 22, '2019-08-09 03:33:09', '2022-05-16 06:31:26', NULL);
 INSERT INTO `thai_amphures` (`id`, `name_th`, `name_en`, `province_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (3313, 'โนนคูณ', 'Non Khun', 22, '2019-08-09 03:33:09', '2022-05-16 06:31:26', NULL);
 INSERT INTO `thai_amphures` (`id`, `name_th`, `name_en`, `province_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (3314, 'ศรีรัตนะ', 'Si Rattana', 22, '2019-08-09 03:33:09', '2022-05-16 06:31:26', NULL);
-INSERT INTO `thai_amphures` (`id`, `name_th`, `name_en`, `province_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (3315, 'น้ำเกลี้ยง', 'Si Rattana', 22, '2019-08-09 03:33:09', '2022-05-16 06:31:26', NULL);
+INSERT INTO `thai_amphures` (`id`, `name_th`, `name_en`, `province_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (3315, 'น้ำเกลี้ยง', 'Nam Kliang', 22, '2019-08-09 03:33:09', '2023-12-21 18:56:10', NULL);
 INSERT INTO `thai_amphures` (`id`, `name_th`, `name_en`, `province_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (3316, 'วังหิน', 'Wang Hin', 22, '2019-08-09 03:33:09', '2022-05-16 06:31:26', NULL);
 INSERT INTO `thai_amphures` (`id`, `name_th`, `name_en`, `province_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (3317, 'ภูสิงห์', 'Phu Sing', 22, '2019-08-09 03:33:09', '2022-05-16 06:31:26', NULL);
 INSERT INTO `thai_amphures` (`id`, `name_th`, `name_en`, `province_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (3318, 'เมืองจันทร์', 'Mueang Chan', 22, '2019-08-09 03:33:09', '2022-05-16 06:31:26', NULL);
