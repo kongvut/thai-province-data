@@ -1,16 +1,15 @@
 /*
-
- Source Server         : bot4k
+ Source Server         : rockpi
  Source Server Type    : MariaDB
- Source Server Version : 100515
- Source Host           : 192.168.31.11:3308
+ Source Server Version : 100808 (10.8.8-MariaDB-1:10.8.8+maria~ubu2204)
+ Source Host           : rockpi.lan:3308
  Source Schema         : thai_data
 
  Target Server Type    : MariaDB
- Target Server Version : 100515
+ Target Server Version : 100808 (10.8.8-MariaDB-1:10.8.8+maria~ubu2204)
  File Encoding         : 65001
 
- Date: 16/05/2022 13:58:58
+ Date: 21/12/2023 19:32:13
 */
 
 SET NAMES utf8mb4;
@@ -22,7 +21,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `thai_geographies`;
 CREATE TABLE `thai_geographies` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
