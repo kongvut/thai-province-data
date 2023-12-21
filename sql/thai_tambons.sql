@@ -1,16 +1,15 @@
 /*
-
- Source Server         : bot4k
+ Source Server         : rockpi
  Source Server Type    : MariaDB
- Source Server Version : 100515
- Source Host           : 192.168.31.11:3308
+ Source Server Version : 100808 (10.8.8-MariaDB-1:10.8.8+maria~ubu2204)
+ Source Host           : rockpi.lan:3308
  Source Schema         : thai_data
 
  Target Server Type    : MariaDB
- Target Server Version : 100515
+ Target Server Version : 100808 (10.8.8-MariaDB-1:10.8.8+maria~ubu2204)
  File Encoding         : 65001
 
- Date: 16/05/2022 13:59:20
+ Date: 21/12/2023 19:32:43
 */
 
 SET NAMES utf8mb4;
@@ -23,8 +22,8 @@ DROP TABLE IF EXISTS `thai_tambons`;
 CREATE TABLE `thai_tambons` (
   `id` int(11) NOT NULL,
   `zip_code` int(11) NOT NULL,
-  `name_th` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name_en` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_th` varchar(150) NOT NULL,
+  `name_en` varchar(150) NOT NULL,
   `amphure_id` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
@@ -1378,7 +1377,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (250606, 25150, 'บางพลวง', 'Bang Phluang', 2506, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (250607, 25150, 'บางปลาร้า', 'Bang Pla Ra', 2506, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (250608, 25150, 'บางขาม', 'Bang Kham', 2506, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (250609, 25150, 'กระทุ่มแพ้ว', 'Krathum Phaeo)', 2506, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (250609, 25150, 'กระทุ่มแพ้ว', 'Krathum Phaeo', 2506, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (250701, 25130, 'ประจันตคาม', 'Prachantakham', 2507, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (250702, 25130, 'เกาะลอย', 'Ko Loi', 2507, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (250703, 25130, 'บ้านหอย', 'Ban Hoi', 2507, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
@@ -2094,7 +2093,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (320804, 32160, 'นานวน', 'Na Nuan', 3208, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (320805, 32160, 'แคน', 'Khaen', 3208, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (320806, 32160, 'หัวงัว', 'Hua Ngua', 3208, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (320807, 32160, 'หนองอียอ', 'Nong I Yo)', 3208, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (320807, 32160, 'หนองอียอ', 'Nong I Yo', 3208, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (320901, 32110, 'ระแงง', 'Ra-ngaeng', 3209, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (320902, 32110, 'ตรึม', 'Truem', 3209, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (320903, 32110, 'จารพัต', 'Charaphat', 3209, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
@@ -2211,7 +2210,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (330407, 33110, 'ละลาย', 'Lalai', 3304, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (330408, 33110, 'รุง', 'Rung', 3304, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (330409, 33110, 'ตระกาจ', 'Trakat', 3304, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (330411, 33110, 'จานใหญ่', 'Chan Yai)', 3304, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (330411, 33110, 'จานใหญ่', 'Chan Yai', 3304, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (330412, 33110, 'ภูเงิน', 'Phu Ngoen', 3304, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (330413, 33110, 'ชำ', 'Cham', 3304, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (330414, 33110, 'กระแชง', 'Krachaeng', 3304, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
@@ -2694,7 +2693,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (360206, 36170, 'โนนแดง', 'Non Dang', 3602, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (360301, 36140, 'คอนสวรรค์', 'Khon Sawan', 3603, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (360302, 36140, 'ยางหวาย', 'Yang Wai', 3603, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (360303, 36140, 'ช่องสามหมอ', 'Chong Sam Mo)', 3603, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (360303, 36140, 'ช่องสามหมอ', 'Chong Sam Mo', 3603, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (360304, 36140, 'โนนสะอาด', 'Non Sa-at', 3603, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (360305, 36140, 'ห้วยไร่', 'Huai Rai', 3603, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (360306, 36140, 'บ้านโสก', 'Ban Sok', 3603, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
@@ -2771,7 +2770,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (361207, 36150, 'โคกกุง', 'Khok Kung', 3612, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (361208, 36150, 'เก่าย่าดี', 'Kao Ya Di', 3612, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (361209, 36150, 'ท่ามะไฟหวาน', 'Tha Mafai Wan', 3612, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (361210, 36150, 'หนองไผ่', 'Nong Phai)', 3612, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (361210, 36150, 'หนองไผ่', 'Nong Phai', 3612, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (361301, 36180, 'คอนสาร', 'Khon San', 3613, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (361302, 36180, 'ทุ่งพระ', 'Thung Phra', 3613, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (361303, 36180, 'โนนคูณ', 'Non Khun', 3613, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
@@ -3224,7 +3223,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (410612, 41130, 'ผักตบ', 'Phak Top', 4106, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (410614, 41130, 'หนองไผ่', 'Nong Phai', 4106, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (410617, 41130, 'ดอนหายโศก', 'Don Hai Sok', 4106, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (410618, 41320, 'หนองสระปลา', 'Nong Sa Pla)', 4106, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (410618, 41320, 'หนองสระปลา', 'Nong Sa Pla', 4106, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (410701, 41310, 'ทุ่งฝน', 'Thung Fon', 4107, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (410702, 41310, 'ทุ่งใหญ่', 'Thung Yai', 4107, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (410703, 41310, 'นาชุมแสง', 'Na Chum Saeng', 4107, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
@@ -4216,7 +4215,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500110, 50100, 'ป่าแดด', 'Pa Daet', 5001, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500111, 50000, 'หนองหอย', 'Nong Hoi', 5001, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500112, 50000, 'ท่าศาลา', 'Tha Sala', 5001, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500113, 50000, 'หนองป่าครั่ง', 'Nong Pa Khrang	', 5001, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500113, 50000, 'หนองป่าครั่ง', 'Nong Pa Khrang', 5001, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500114, 50000, 'ฟ้าฮ่าม', 'Fa Ham', 5001, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500115, 50300, 'ป่าตัน', 'Pa Tan', 5001, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500116, 50300, 'สันผีเสื้อ', 'San Phi Suea', 5001, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
@@ -4253,7 +4252,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500508, 50220, 'สำราญราษฎร์', 'Samran Rat', 5005, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500509, 50220, 'แม่คือ', 'Mae Khue', 5005, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500510, 50220, 'ตลาดใหญ่', 'Talat Yai', 5005, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500511, 50220, 'แม่ฮ้อยเงิน', 'Mae Hoi Ngoen	', 5005, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500511, 50220, 'แม่ฮ้อยเงิน', 'Mae Hoi Ngoen', 5005, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500512, 50220, 'แม่โป่ง', 'Mae Pong', 5005, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500513, 50220, 'ป่าเมี่ยง', 'Pa Miang', 5005, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (500514, 50220, 'เทพเสด็จ', 'Thep Sadet', 5005, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
@@ -5168,7 +5167,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (601303, 60150, 'แม่เล่ย์', 'Mae Le', 6013, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (601304, 60150, 'วังซ่าน', 'Wang San', 6013, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (601305, 60150, 'เขาชนกัน', 'Khao Chon Kan', 6013, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (601401, 60150, 'แม่เปิน', 'Mae Poen)', 6014, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (601401, 60150, 'แม่เปิน', 'Mae Poen', 6014, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (601501, 60150, 'ชุมตาบง', 'Chum Ta Bong', 6015, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (601502, 60150, 'ปางสวรรค์', 'Pang Sawan', 6015, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (610101, 61000, 'อุทัยใหม่', 'Uthai Mai', 6101, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
@@ -6777,7 +6776,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841207, 84120, 'ควนสุบรรณ', 'Khuan Suban', 8412, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841208, 84120, 'คลองปราบ', 'Khlong Prap', 8412, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841209, 84120, 'น้ำพุ', 'Nam Phu', 8412, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841210, 84120, 'ทุ่งเตาใหม่', 'Thung Tao Mai)', 8412, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841210, 84120, 'ทุ่งเตาใหม่', 'Thung Tao Mai', 8412, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841211, 84120, 'เพิ่มพูนทรัพย์', 'Phoem Phun Sap', 8412, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841301, 84240, 'บ้านนา', 'Ban Na', 8413, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841302, 84240, 'ท่าเรือ', 'Tha Ruea', 8413, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
@@ -6804,7 +6803,7 @@ INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841702, 84130, 'ท่าสะท้อน', 'Tha Sathon', 8417, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841703, 84130, 'ลีเล็ด', 'Lilet', 8417, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841704, 84130, 'บางมะเดื่อ', 'Bang Maduea', 8417, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
-INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841705, 84130, 'บางเดือน', 'Bang Duean)', 8417, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
+INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841705, 84130, 'บางเดือน', 'Bang Duean', 8417, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841706, 84130, 'ท่าโรงช้าง', 'Tha Rong Chang', 8417, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841707, 84130, 'กรูด', 'Krut', 8417, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
 INSERT INTO `thai_tambons` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (841708, 84130, 'พุนพิน', 'Phunphin', 8417, '2019-08-09 03:33:09', '2022-05-16 06:31:31', NULL);
