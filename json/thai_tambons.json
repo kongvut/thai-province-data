@@ -440,6 +440,16 @@
     "deleted_at": null
   },
   {
+    "id": 100910,
+    "zip_code": 10260,
+    "name_th": "พระโขนงใต้",
+    "name_en": "Phra Khanong Tai",
+    "amphure_id": 1009,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
     "id": 101001,
     "zip_code": 10510,
     "name_th": "มีนบุรี",
@@ -577,6 +587,16 @@
     "amphure_id": 1014,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
+    "deleted_at": null
+  },
+  {
+    "id": 101406,
+    "zip_code": 10400,
+    "name_th": "พญาไท",
+    "name_en": "Phaya Thai",
+    "amphure_id": 1014,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -897,7 +917,7 @@
     "amphure_id": 1022,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 102204,
@@ -907,7 +927,7 @@
     "amphure_id": 1022,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 102205,
@@ -917,7 +937,7 @@
     "amphure_id": 1022,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 102206,
@@ -1060,6 +1080,16 @@
     "deleted_at": null
   },
   {
+    "id": 102602,
+    "zip_code": 10400,
+    "name_th": "รัชดาภิเษก",
+    "name_en": "Ratchadaphisek",
+    "amphure_id": 1026,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
     "id": 102701,
     "zip_code": 10240,
     "name_th": "คลองกุ่ม",
@@ -1077,7 +1107,7 @@
     "amphure_id": 1027,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 102703,
@@ -1087,6 +1117,26 @@
     "amphure_id": 1027,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
+    "deleted_at": "25/9/2024 00:00:00"
+  },
+  {
+    "id": 102704,
+    "zip_code": 10240,
+    "name_th": "นวมินทร์",
+    "name_en": "Nawamin",
+    "amphure_id": 1027,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 102705,
+    "zip_code": 10230,
+    "name_th": "นวลจันทร์",
+    "name_en": "Nuan Chan",
+    "amphure_id": 1027,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -1127,6 +1177,16 @@
     "amphure_id": 1029,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
+    "deleted_at": null
+  },
+  {
+    "id": 102902,
+    "zip_code": 10800,
+    "name_th": "วงศ์สว่าง",
+    "name_en": "Wong Sawang",
+    "amphure_id": 1029,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -1247,7 +1307,7 @@
     "amphure_id": 1032,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 103301,
@@ -1287,7 +1347,7 @@
     "amphure_id": 1033,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 103305,
@@ -1297,7 +1357,7 @@
     "amphure_id": 1033,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 103306,
@@ -1307,7 +1367,7 @@
     "amphure_id": 1033,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 103401,
@@ -1317,6 +1377,26 @@
     "amphure_id": 1034,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
+    "deleted_at": null
+  },
+  {
+    "id": 103402,
+    "zip_code": 10250,
+    "name_th": "อ่อนนุช",
+    "name_en": "On Nut",
+    "amphure_id": 1034,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 103403,
+    "zip_code": 10250,
+    "name_th": "พัฒนาการ",
+    "name_en": "Phatthanakan",
+    "amphure_id": 1034,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -1367,6 +1447,26 @@
     "amphure_id": 1036,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
+    "deleted_at": null
+  },
+  {
+    "id": 103604,
+    "zip_code": 10210,
+    "name_th": "ดอนเมือง",
+    "name_en": "Don Mueang",
+    "amphure_id": 1036,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 103605,
+    "zip_code": 10210,
+    "name_th": "สนามบิน",
+    "name_en": "Sanam Bin",
+    "amphure_id": 1036,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -1560,6 +1660,16 @@
     "deleted_at": null
   },
   {
+    "id": 104302,
+    "zip_code": 10230,
+    "name_th": "รามอินทรา",
+    "name_en": "Ram Inthra",
+    "amphure_id": 1043,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
     "id": 104401,
     "zip_code": 10240,
     "name_th": "สะพานสูง",
@@ -1570,6 +1680,26 @@
     "deleted_at": null
   },
   {
+    "id": 104402,
+    "zip_code": 10240,
+    "name_th": "ราษฎร์พัฒนา",
+    "name_en": "Rat Phatthana",
+    "amphure_id": 1044,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 104403,
+    "zip_code": 10250,
+    "name_th": "ทับช้าง",
+    "name_en": "Thap Chang",
+    "amphure_id": 1044,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
     "id": 104501,
     "zip_code": 10310,
     "name_th": "วังทองหลาง",
@@ -1577,6 +1707,36 @@
     "amphure_id": 1045,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
+    "deleted_at": null
+  },
+  {
+    "id": 104502,
+    "zip_code": 10310,
+    "name_th": "สะพานสอง",
+    "name_en": "Saphan Song",
+    "amphure_id": 1045,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 104503,
+    "zip_code": 10310,
+    "name_th": "คลองเจ้าคุณสิงห์",
+    "name_en": "Khlong Chao Khun Sing",
+    "amphure_id": 1045,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 104504,
+    "zip_code": 10310,
+    "name_th": "พลับพลา",
+    "name_en": "Phlapphla",
+    "amphure_id": 1045,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -1637,6 +1797,26 @@
     "amphure_id": 1047,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
+    "deleted_at": "25/9/2024 00:00:00"
+  },
+  {
+    "id": 104702,
+    "zip_code": 10260,
+    "name_th": "บางนาเหนือ",
+    "name_en": "Bang Na Nuea",
+    "amphure_id": 1047,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 104703,
+    "zip_code": 10260,
+    "name_th": "บางนาใต้",
+    "name_en": "Bang Na Tai",
+    "amphure_id": 1047,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -1687,6 +1867,46 @@
     "amphure_id": 1050,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
+    "deleted_at": "25/9/2024 00:00:00"
+  },
+  {
+    "id": 105002,
+    "zip_code": 10150,
+    "name_th": "บางบอนเหนือ",
+    "name_en": "Bang Bon Nuea",
+    "amphure_id": 1050,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 105003,
+    "zip_code": 10150,
+    "name_th": "บางบอนใต้",
+    "name_en": "Bang Bon Tai",
+    "amphure_id": 1050,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 105004,
+    "zip_code": 10150,
+    "name_th": "คลองบางพราน",
+    "name_en": "Khlong Bang Phran",
+    "amphure_id": 1050,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 105005,
+    "zip_code": 10150,
+    "name_th": "คลองบางบอน",
+    "name_en": "Khlong Bang Bon",
+    "amphure_id": 1050,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -1761,12 +1981,12 @@
   },
   {
     "id": 110112,
-    "zip_code": 10270,
+    "zip_code": 10280,
     "name_th": "บางปู",
     "name_en": "Bang Pu",
     "amphure_id": 1101,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -2143,10 +2363,10 @@
     "id": 110504,
     "zip_code": 10290,
     "name_th": "ปากคลองบางปลากด",
-    "name_en": "Pak Klong Bang Pla Kot",
+    "name_en": "Pak Khlong Bang Pla Kot",
     "amphure_id": 1105,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -2161,32 +2381,32 @@
   },
   {
     "id": 110601,
-    "zip_code": 10540,
+    "zip_code": 10570,
     "name_th": "บางเสาธง",
     "name_en": "Bang Sao Thong",
     "amphure_id": 1106,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 110602,
-    "zip_code": 10540,
+    "zip_code": 10570,
     "name_th": "ศีรษะจรเข้น้อย",
     "name_en": "Sisa Chorakhe Noi",
     "amphure_id": 1106,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 110603,
-    "zip_code": 10540,
+    "zip_code": 10570,
     "name_th": "ศีรษะจรเข้ใหญ่",
     "name_en": "Sisa Chorakhe Yai",
     "amphure_id": 1106,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -3541,12 +3761,12 @@
   },
   {
     "id": 140203,
-    "zip_code": 13130,
+    "zip_code": 18270,
     "name_th": "ท่าหลวง",
     "name_en": "Tha Luang",
     "amphure_id": 1402,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -5932,11 +6152,11 @@
   {
     "id": 150601,
     "zip_code": 14110,
-    "name_th": "ไผ่จำศิล",
+    "name_th": "ไผ่จำศีล",
     "name_en": "Phai Cham Sin",
     "amphure_id": 1506,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -6171,12 +6391,12 @@
   },
   {
     "id": 160105,
-    "zip_code": 15000,
+    "zip_code": 15160,
     "name_th": "เขาพระงาม",
     "name_en": "Khao Phra Ngam",
     "amphure_id": 1601,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -6191,12 +6411,12 @@
   },
   {
     "id": 160107,
-    "zip_code": 15000,
+    "zip_code": 15160,
     "name_th": "โคกกะเทียม",
     "name_en": "Khok Kathiam",
     "amphure_id": 1601,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -8003,20 +8223,20 @@
     "id": 180306,
     "zip_code": 17120,
     "name_th": "หนองขุ่น",
-    "name_en": "Bo Rae",
+    "name_en": "Nong Khun",
     "amphure_id": 1803,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 180307,
     "zip_code": 17120,
     "name_th": "บ่อแร่",
-    "name_en": "Wang Man",
+    "name_en": "Bo Rae",
     "amphure_id": 1803,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -9321,22 +9541,22 @@
   },
   {
     "id": 191105,
-    "zip_code": 18180,
+    "zip_code": 30130,
     "name_th": "ลำสมพุง",
     "name_en": "Lam Somphung",
     "amphure_id": 1911,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 191107,
-    "zip_code": 18180,
+    "zip_code": 30130,
     "name_th": "ลำพญากลาง",
     "name_en": "Lam Phaya Klang",
     "amphure_id": 1911,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -9471,12 +9691,12 @@
   },
   {
     "id": 200104,
-    "zip_code": 20000,
+    "zip_code": 20130,
     "name_th": "แสนสุข",
     "name_en": "Saen Suk",
     "amphure_id": 2001,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -9591,12 +9811,12 @@
   },
   {
     "id": 200116,
-    "zip_code": 20130,
+    "zip_code": 20000,
     "name_th": "เสม็ด",
     "name_en": "Samet",
     "amphure_id": 2001,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -12041,12 +12261,12 @@
   },
   {
     "id": 230601,
-    "zip_code": 23000,
+    "zip_code": 23120,
     "name_th": "เกาะหมาก",
     "name_en": "Ko Mak",
     "amphure_id": 2306,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -12541,12 +12761,12 @@
   },
   {
     "id": 240409,
-    "zip_code": 24130,
+    "zip_code": 24180,
     "name_th": "พิมพา",
     "name_en": "Phimpha",
     "amphure_id": 2404,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -15247,7 +15467,7 @@
     "amphure_id": 3006,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 300603,
@@ -15287,7 +15507,7 @@
     "amphure_id": 3006,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 300607,
@@ -15307,7 +15527,7 @@
     "amphure_id": 3006,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 300609,
@@ -15317,7 +15537,7 @@
     "amphure_id": 3006,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 300610,
@@ -15347,7 +15567,7 @@
     "amphure_id": 3006,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 300613,
@@ -15717,7 +15937,7 @@
     "amphure_id": 3009,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 300911,
@@ -15727,7 +15947,7 @@
     "amphure_id": 3009,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 300912,
@@ -15737,7 +15957,7 @@
     "amphure_id": 3009,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 300913,
@@ -15747,7 +15967,7 @@
     "amphure_id": 3009,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 300914,
@@ -15767,7 +15987,7 @@
     "amphure_id": 3009,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301001,
@@ -15821,12 +16041,12 @@
   },
   {
     "id": 301006,
-    "zip_code": 30240,
+    "zip_code": 30420,
     "name_th": "ธารปราสาท",
     "name_en": "Than Prasat",
     "amphure_id": 3010,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -16067,7 +16287,7 @@
     "amphure_id": 3012,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301210,
@@ -16077,7 +16297,7 @@
     "amphure_id": 3012,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301211,
@@ -16087,7 +16307,7 @@
     "amphure_id": 3012,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301212,
@@ -16097,7 +16317,7 @@
     "amphure_id": 3012,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301214,
@@ -16127,7 +16347,7 @@
     "amphure_id": 3012,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301218,
@@ -16137,7 +16357,7 @@
     "amphure_id": 3012,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301220,
@@ -16157,7 +16377,7 @@
     "amphure_id": 3012,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301222,
@@ -16167,7 +16387,7 @@
     "amphure_id": 3012,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301223,
@@ -16177,7 +16397,7 @@
     "amphure_id": 3012,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301224,
@@ -16757,7 +16977,7 @@
     "amphure_id": 3017,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301707,
@@ -16767,7 +16987,7 @@
     "amphure_id": 3017,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301710,
@@ -16787,7 +17007,7 @@
     "amphure_id": 3017,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301714,
@@ -16807,7 +17027,7 @@
     "amphure_id": 3017,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 301716,
@@ -20513,10 +20733,10 @@
     "id": 320716,
     "zip_code": 32130,
     "name_th": "ทับใหญ่",
-    "name_en": "Thap Ya",
+    "name_en": "Thap Yai",
     "amphure_id": 3207,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -23607,7 +23827,7 @@
     "amphure_id": 3403,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 340401,
@@ -24563,10 +24783,10 @@
     "id": 341404,
     "zip_code": 34140,
     "name_th": "หนองช้างใหญ่",
-    "name_en": "Non Chang Yai",
+    "name_en": "Nong Chang Yai",
     "amphure_id": 3414,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -24812,11 +25032,11 @@
   {
     "id": 341524,
     "zip_code": 34310,
-    "name_th": "ห้วยขะยูง",
+    "name_th": "ห้วยขะยุง",
     "name_en": "Huai Khayung",
     "amphure_id": 3415,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -27443,20 +27663,20 @@
     "id": 361401,
     "zip_code": 36260,
     "name_th": "บ้านเจียง",
-    "name_en": "Chao Thong",
+    "name_en": "Ban Chiang",
     "amphure_id": 3614,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 361402,
     "zip_code": 36260,
     "name_th": "เจาทอง",
-    "name_en": "Ban Chiang",
+    "name_en": "Chao Thong",
     "amphure_id": 3614,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -28041,342 +28261,322 @@
   },
   {
     "id": 370701,
-    "zip_code": 37000,
+    "zip_code": 37120,
     "name_th": "อำนาจ",
     "name_en": "Amnat",
     "amphure_id": 3707,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 370702,
-    "zip_code": 37000,
+    "zip_code": 37120,
     "name_th": "ดงมะยาง",
     "name_en": "Dong Mayang",
     "amphure_id": 3707,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 370703,
-    "zip_code": 37000,
+    "zip_code": 37120,
     "name_th": "เปือย",
     "name_en": "Pueai",
     "amphure_id": 3707,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 370704,
-    "zip_code": 37000,
+    "zip_code": 37120,
     "name_th": "ดงบัง",
     "name_en": "Dong Bang",
     "amphure_id": 3707,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 370705,
-    "zip_code": 37000,
+    "zip_code": 37120,
     "name_th": "ไร่ขี",
     "name_en": "Rai Khi",
     "amphure_id": 3707,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 370706,
-    "zip_code": 37000,
+    "zip_code": 37120,
     "name_th": "แมด",
     "name_en": "Maet",
     "amphure_id": 3707,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 370707,
-    "zip_code": 37000,
+    "zip_code": 37120,
     "name_th": "โคกกลาง",
     "name_en": "Khok Klang",
     "amphure_id": 3707,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380101,
     "zip_code": 38000,
-    "name_th": "คำนาดี",
-    "name_en": "Kham Na Di",
+    "name_th": "บึงกาฬ",
+    "name_en": "Bueng Kan",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380102,
     "zip_code": 38000,
-    "name_th": "บึงโขงหลง",
-    "name_en": "Bueng Khong Long",
+    "name_th": "โนนสมบูรณ์",
+    "name_en": "Non Sombun",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380103,
     "zip_code": 38000,
-    "name_th": "ไคสี",
-    "name_en": "Khai Si",
+    "name_th": "โนนสว่าง",
+    "name_en": "Non Sawang",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380104,
     "zip_code": 38000,
-    "name_th": "ชัยพร",
-    "name_en": "Chaiyaphon",
+    "name_th": "หอคำ",
+    "name_en": "Ho Kham",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380105,
     "zip_code": 38000,
-    "name_th": "นาสวรรค์",
-    "name_en": "Na Sawan",
+    "name_th": "หนองเลิง",
+    "name_en": "Nong Loeng",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380106,
     "zip_code": 38000,
-    "name_th": "โนนสมบูรณ์",
-    "name_en": "Non Sombun",
+    "name_th": "โคกก่อง",
+    "name_en": "Khok Kong",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380107,
     "zip_code": 38000,
-    "name_th": "บึงกาฬ",
-    "name_en": "Bueng Kan",
+    "name_th": "นาสวรรค์",
+    "name_en": "Na Sawan",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380108,
     "zip_code": 38000,
-    "name_th": "โป่งเปื่อย",
-    "name_en": "Pong Pueai",
+    "name_th": "ไคสี",
+    "name_en": "Khai Si",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380109,
     "zip_code": 38000,
-    "name_th": "วิศิษฐ์",
-    "name_en": "Wisit",
+    "name_th": "ชัยพร",
+    "name_en": "Chaiyaphon",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380110,
     "zip_code": 38000,
-    "name_th": "หนองเข็ง",
-    "name_en": "Nong Keng",
+    "name_th": "วิศิษฐ์",
+    "name_en": "Wisit",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380111,
     "zip_code": 38000,
-    "name_th": "หนองเลิง",
-    "name_en": "Nong Loeng",
+    "name_th": "คำนาดี",
+    "name_en": "Kham Na Di",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380112,
     "zip_code": 38000,
-    "name_th": "หอคำ",
-    "name_en": "Ho Kham",
+    "name_th": "โป่งเปือย",
+    "name_en": "Pong Pueai",
     "amphure_id": 3801,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380201,
-    "zip_code": 38150,
-    "name_th": "ซาง",
-    "name_en": "Sang",
+    "zip_code": 38180,
+    "name_th": "ศรีชมภู",
+    "name_en": "Si Chomphu",
     "amphure_id": 3802,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380202,
-    "zip_code": 38150,
-    "name_th": "เซกา",
-    "name_en": "Seka",
+    "zip_code": 38180,
+    "name_th": "ดอนหญ้านาง",
+    "name_en": "Don Ya Nang",
     "amphure_id": 3802,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380203,
-    "zip_code": 38150,
-    "name_th": "ท่ากกแดง",
-    "name_en": "Tha Kok Daeng",
+    "zip_code": 38180,
+    "name_th": "พรเจริญ",
+    "name_en": "Phon Charoen",
     "amphure_id": 3802,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380204,
-    "zip_code": 38150,
-    "name_th": "ท่าสะอาด",
-    "name_en": "Tha Sa-at",
+    "zip_code": 38180,
+    "name_th": "หนองหัวช้าง",
+    "name_en": "Nong Hua Chang",
     "amphure_id": 3802,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380205,
-    "zip_code": 38150,
-    "name_th": "น้ำจั้น",
-    "name_en": "Nam Chan",
+    "zip_code": 38180,
+    "name_th": "วังชมภู",
+    "name_en": "Wang Chomphu",
     "amphure_id": 3802,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380206,
-    "zip_code": 38150,
-    "name_th": "บ้านต้อง",
-    "name_en": "Ban Tong",
+    "zip_code": 38180,
+    "name_th": "ป่าแฝก",
+    "name_en": "Pa Faek",
     "amphure_id": 3802,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380207,
-    "zip_code": 38150,
-    "name_th": "ป่งไฮ",
-    "name_en": "Pong Hai",
+    "zip_code": 38180,
+    "name_th": "ศรีสำราญ",
+    "name_en": "Si Samran",
     "amphure_id": 3802,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
-  },
-  {
-    "id": 380208,
-    "zip_code": 38150,
-    "name_th": "โสกก่าม",
-    "name_en": "Sok Kam",
-    "amphure_id": 3802,
-    "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
-  },
-  {
-    "id": 380209,
-    "zip_code": 38150,
-    "name_th": "หนองทุ่ม",
-    "name_en": "Nong Thum",
-    "amphure_id": 3802,
-    "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380301,
     "zip_code": 38170,
-    "name_th": "คำแก้ว",
-    "name_en": "Kham Kaeo",
+    "name_th": "โซ่",
+    "name_en": "So",
     "amphure_id": 3803,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380302,
     "zip_code": 38170,
-    "name_th": "โซ่",
-    "name_en": "So",
+    "name_th": "หนองพันทา",
+    "name_en": "Nong Phan Tha",
     "amphure_id": 3803,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380303,
     "zip_code": 38170,
-    "name_th": "ถ้ำเจริญ",
-    "name_en": "Tham Charoen",
+    "name_th": "ศรีชมภู",
+    "name_en": "Si Chomphu",
     "amphure_id": 3803,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380304,
     "zip_code": 38170,
-    "name_th": "บัวตูม",
-    "name_en": "Bua Tum",
+    "name_th": "คำแก้ว",
+    "name_en": "Kham Kaeo",
     "amphure_id": 3803,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380305,
     "zip_code": 38170,
-    "name_th": "ศรีชมภู",
-    "name_en": "Si Chomphu",
+    "name_th": "บัวตูม",
+    "name_en": "Bua Tum",
     "amphure_id": 3803,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380306,
     "zip_code": 38170,
-    "name_th": "หนองพันทา",
-    "name_en": "Nong Phan Tha",
+    "name_th": "ถ้ำเจริญ",
+    "name_en": "Tham Charoen",
     "amphure_id": 3803,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -28386,257 +28586,277 @@
     "name_en": "Lao Thong",
     "amphure_id": 3803,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380401,
-    "zip_code": 38180,
-    "name_th": "ดอนหญ้านาง",
-    "name_en": "Don Ya Nang",
+    "zip_code": 38150,
+    "name_th": "เซกา",
+    "name_en": "Seka",
     "amphure_id": 3804,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380402,
-    "zip_code": 38180,
-    "name_th": "ป่าแฝก",
-    "name_en": "Pa Faek",
+    "zip_code": 38150,
+    "name_th": "ซาง",
+    "name_en": "Sang",
     "amphure_id": 3804,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380403,
-    "zip_code": 38180,
-    "name_th": "พรเจริญ",
-    "name_en": "Phon Charoen",
+    "zip_code": 38150,
+    "name_th": "ท่ากกแดง",
+    "name_en": "Tha Kok Daeng",
     "amphure_id": 3804,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380404,
-    "zip_code": 38180,
-    "name_th": "วังชมภู",
-    "name_en": "Wang Chomphu",
+    "zip_code": 38150,
+    "name_th": "บ้านต้อง",
+    "name_en": "Ban Tong",
     "amphure_id": 3804,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380405,
-    "zip_code": 38180,
-    "name_th": "ศรีชมภู",
-    "name_en": "Si Chomphu",
+    "zip_code": 38150,
+    "name_th": "ป่งไฮ",
+    "name_en": "Pong Hai",
     "amphure_id": 3804,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380406,
-    "zip_code": 38180,
-    "name_th": "ศรีสำราญ",
-    "name_en": "Si Samran",
+    "zip_code": 38150,
+    "name_th": "น้ำจั้น",
+    "name_en": "Nam Chan",
     "amphure_id": 3804,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380407,
-    "zip_code": 38180,
-    "name_th": "หนองหัวช้าง",
-    "name_en": "Nong Hua Chang",
+    "zip_code": 38150,
+    "name_th": "ท่าสะอาด",
+    "name_en": "Tha Sa-at",
     "amphure_id": 3804,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 380408,
+    "zip_code": 38150,
+    "name_th": "หนองทุ่ม",
+    "name_en": "Nong Thum",
+    "amphure_id": 3804,
+    "created_at": "9/8/2019 03:33:09",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 380409,
+    "zip_code": 38150,
+    "name_th": "โสกก่าม",
+    "name_en": "Sok Kam",
+    "amphure_id": 3804,
+    "created_at": "9/8/2019 03:33:09",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380501,
-    "zip_code": 38210,
-    "name_th": "ชุมภูพร",
-    "name_en": "Chumphu Phon",
+    "zip_code": 38190,
+    "name_th": "ปากคาด",
+    "name_en": "Pak Khat",
     "amphure_id": 3805,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380502,
-    "zip_code": 38210,
-    "name_th": "นาสะแบง",
-    "name_en": "Na Sabaeng",
+    "zip_code": 38190,
+    "name_th": "หนองยอง",
+    "name_en": "Nong Yong",
     "amphure_id": 3805,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380503,
-    "zip_code": 38210,
-    "name_th": "นาสิงห์",
-    "name_en": "Na Sing",
+    "zip_code": 38190,
+    "name_th": "นากั้ง",
+    "name_en": "Na Kang",
     "amphure_id": 3805,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380504,
-    "zip_code": 38210,
-    "name_th": "นาแสง",
-    "name_en": "Na Saeng",
+    "zip_code": 38190,
+    "name_th": "โนนศิลา",
+    "name_en": "Non Sila",
     "amphure_id": 3805,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380505,
-    "zip_code": 38210,
-    "name_th": "ศรีวิไล",
-    "name_en": "Si Wilai",
+    "zip_code": 38190,
+    "name_th": "สมสนุก",
+    "name_en": "Som Sanuk",
     "amphure_id": 3805,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 380506,
+    "zip_code": 38190,
+    "name_th": "นาดง",
+    "name_en": "Na Dong",
+    "amphure_id": 3805,
+    "created_at": "9/8/2019 03:33:09",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380601,
     "zip_code": 38220,
-    "name_th": "ดงบัง",
-    "name_en": "Dong Bang",
+    "name_th": "บึงโขงหลง",
+    "name_en": "Bueng Khong Long",
     "amphure_id": 3806,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380602,
     "zip_code": 38220,
-    "name_th": "ท่าดอกคำ",
-    "name_en": "Tha Dok Kham",
+    "name_th": "โพธิ์หมากแข้ง",
+    "name_en": "Pho Mak Khaeng",
     "amphure_id": 3806,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380603,
     "zip_code": 38220,
-    "name_th": "บึงโขงหลง",
-    "name_en": "Bueng Khong Long",
+    "name_th": "ดงบัง",
+    "name_en": "Dong Bang",
     "amphure_id": 3806,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380604,
     "zip_code": 38220,
-    "name_th": "โพธิ์หมากแข้ง",
-    "name_en": "Pho Mak Khaeng",
+    "name_th": "ท่าดอกคำ",
+    "name_en": "Tha Dok Kham",
     "amphure_id": 3806,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380701,
-    "zip_code": 38190,
-    "name_th": "นากั้ง",
-    "name_en": "Na Kang",
+    "zip_code": 38210,
+    "name_th": "ศรีวิไล",
+    "name_en": "Si Wilai",
     "amphure_id": 3807,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380702,
-    "zip_code": 38190,
-    "name_th": "นาดง",
-    "name_en": "Na Dong",
+    "zip_code": 38210,
+    "name_th": "ชุมภูพร",
+    "name_en": "Chumphu Phon",
     "amphure_id": 3807,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380703,
-    "zip_code": 38190,
-    "name_th": "โนนศิลา",
-    "name_en": "Non Sila",
+    "zip_code": 38210,
+    "name_th": "นาแสง",
+    "name_en": "Na Saeng",
     "amphure_id": 3807,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380704,
-    "zip_code": 38190,
-    "name_th": "ปากคาด",
-    "name_en": "Pak Khat",
+    "zip_code": 38210,
+    "name_th": "นาสะแบง",
+    "name_en": "Na Sabaeng",
     "amphure_id": 3807,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380705,
-    "zip_code": 38190,
-    "name_th": "สมสนุก",
-    "name_en": "Som Sanuk",
+    "zip_code": 38210,
+    "name_th": "นาสิงห์",
+    "name_en": "Na Sing",
     "amphure_id": 3807,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
-  },
-  {
-    "id": 380706,
-    "zip_code": 38190,
-    "name_th": "หนองยอง",
-    "name_en": "Nong Yong",
-    "amphure_id": 3807,
-    "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380801,
     "zip_code": 38000,
-    "name_th": "โคกกว้าง",
-    "name_en": "Khok Kwang",
+    "name_th": "บุ่งคล้า",
+    "name_en": "Bung Khla",
     "amphure_id": 3808,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380802,
     "zip_code": 38000,
-    "name_th": "บุ่งคล้า",
-    "name_en": "Bung Khla",
+    "name_th": "หนองเดิ่น",
+    "name_en": "Nong Doen",
     "amphure_id": 3808,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 380803,
     "zip_code": 38000,
-    "name_th": "หนองเดิน",
-    "name_en": "Nong Doen",
+    "name_th": "โคกกว้าง",
+    "name_en": "Khok Kwang",
     "amphure_id": 3808,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -29961,12 +30181,12 @@
   },
   {
     "id": 400712,
-    "zip_code": 40140,
+    "zip_code": 40310,
     "name_th": "กุดน้ำใส",
     "name_en": "Kut Nam Sai",
     "amphure_id": 4007,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -31191,32 +31411,32 @@
   },
   {
     "id": 402901,
-    "zip_code": 0,
+    "zip_code": 40150,
     "name_th": "ในเมือง",
     "name_en": "Nai Mueang",
     "amphure_id": 4029,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 402902,
-    "zip_code": 0,
+    "zip_code": 40150,
     "name_th": "เมืองเก่าพัฒนา",
     "name_en": "Mueang Kao Phatthana",
     "amphure_id": 4029,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 402903,
-    "zip_code": 0,
+    "zip_code": 40150,
     "name_th": "เขาน้อย",
     "name_en": "Khao Noi",
     "amphure_id": 4029,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -33782,11 +34002,11 @@
   {
     "id": 430111,
     "zip_code": 43100,
-    "name_th": "สองห้อง",
-    "name_en": "Song Hong",
+    "name_th": "โพนสว่าง",
+    "name_en": "Phon Sawang",
     "amphure_id": 4301,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -34171,52 +34391,52 @@
   },
   {
     "id": 431501,
-    "zip_code": 43120,
+    "zip_code": 43230,
     "name_th": "เฝ้าไร่",
     "name_en": "Fao Rai",
     "amphure_id": 4315,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 431502,
-    "zip_code": 43120,
+    "zip_code": 43230,
     "name_th": "นาดี",
     "name_en": "Na Di",
     "amphure_id": 4315,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 431503,
-    "zip_code": 43120,
+    "zip_code": 43230,
     "name_th": "หนองหลวง",
     "name_en": "Nong Luang",
     "amphure_id": 4315,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 431504,
-    "zip_code": 43120,
+    "zip_code": 43230,
     "name_th": "วังหลวง",
     "name_en": "Wang Luang",
     "amphure_id": 4315,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 431505,
-    "zip_code": 43120,
+    "zip_code": 43230,
     "name_th": "อุดมพร",
     "name_en": "Udom Phon",
     "amphure_id": 4315,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -34593,10 +34813,10 @@
     "id": 440311,
     "zip_code": 44140,
     "name_th": "หนองบอน",
-    "name_en": "Nong Bua",
+    "name_en": "Nong Bon",
     "amphure_id": 4403,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -35522,11 +35742,11 @@
   {
     "id": 441106,
     "zip_code": 44210,
-    "name_th": "ขามเรียน",
+    "name_th": "สร้างแซ่ง",
     "name_en": "Sang Saeng",
     "amphure_id": 4411,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -35702,11 +35922,11 @@
   {
     "id": 450109,
     "zip_code": 45000,
-    "name_th": "ปอภาร  (ปอพาน)",
+    "name_th": "ปอภาร",
     "name_en": "Po Phan",
     "amphure_id": 4501,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -38961,12 +39181,12 @@
   },
   {
     "id": 470107,
-    "zip_code": 47000,
+    "zip_code": 47230,
     "name_th": "ท่าแร่",
     "name_en": "Tha Rae",
     "amphure_id": 4701,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -41503,10 +41723,10 @@
     "id": 490505,
     "zip_code": 49110,
     "name_th": "หนองเอี่ยน",
-    "name_en": "(Nong Ian",
+    "name_en": "Nong Ian",
     "amphure_id": 4905,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -41957,7 +42177,7 @@
     "amphure_id": 5003,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 500307,
@@ -41987,7 +42207,7 @@
     "amphure_id": 5003,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 500310,
@@ -41997,7 +42217,7 @@
     "amphure_id": 5003,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 500401,
@@ -42347,7 +42567,7 @@
     "amphure_id": 5006,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 500701,
@@ -43730,6 +43950,36 @@
     "deleted_at": null
   },
   {
+    "id": 502501,
+    "zip_code": 58130,
+    "name_th": "บ้านจันทร์",
+    "name_en": "Ban Chan",
+    "amphure_id": 5025,
+    "created_at": "9/8/2019 03:33:09",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 502502,
+    "zip_code": 58130,
+    "name_th": "แม่แดด",
+    "name_en": "Mae Daet",
+    "amphure_id": 5025,
+    "created_at": "9/8/2019 03:33:09",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
+    "id": 502503,
+    "zip_code": 58130,
+    "name_th": "แจ่มหลวง",
+    "name_en": "Chaem Luang",
+    "amphure_id": 5025,
+    "created_at": "9/8/2019 03:33:09",
+    "updated_at": "25/9/2024 00:00:00",
+    "deleted_at": null
+  },
+  {
     "id": 510101,
     "zip_code": 51000,
     "name_th": "ในเมือง",
@@ -44971,7 +45221,7 @@
   },
   {
     "id": 520904,
-    "zip_code": 52180,
+    "zip_code": 52230,
     "name_th": "พระบาทวังตวง",
     "name_en": "Phra Bat Wang Tuang",
     "amphure_id": 5209,
@@ -45471,7 +45721,7 @@
   },
   {
     "id": 530302,
-    "zip_code": 53150,
+    "zip_code": 53190,
     "name_th": "หาดล้า",
     "name_en": "Hat La",
     "amphure_id": 5303,
@@ -45517,7 +45767,7 @@
     "amphure_id": 5303,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 530307,
@@ -45597,6 +45847,16 @@
     "amphure_id": 5304,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
+    "deleted_at": null
+  },
+  {
+    "id": 530407,
+    "zip_code": 53110,
+    "name_th": "ท่าแฝก",
+    "name_en": "Tha Faek",
+    "amphure_id": 5304,
+    "created_at": "25/9/2024 00:00:00",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -46782,11 +47042,11 @@
   {
     "id": 550116,
     "zip_code": 55000,
-    "name_th": "สวก",
-    "name_en": "Suak",
+    "name_th": "บ่อสวก",
+    "name_en": "Bo Suak",
     "amphure_id": 5501,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -47671,7 +47931,7 @@
   },
   {
     "id": 551502,
-    "zip_code": 55130,
+    "zip_code": 55220,
     "name_th": "ขุนน่าน",
     "name_en": "Khun Nan",
     "amphure_id": 5515,
@@ -48621,12 +48881,12 @@
   },
   {
     "id": 570308,
-    "zip_code": 57230,
+    "zip_code": 57140,
     "name_th": "ศรีดอนชัย",
     "name_en": "Si Don Chai",
     "amphure_id": 5703,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -48721,22 +48981,22 @@
   },
   {
     "id": 570412,
-    "zip_code": 57160,
+    "zip_code": 57230,
     "name_th": "ศรีดอนไชย",
     "name_en": "Si Don Chai",
     "amphure_id": 5704,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 570413,
-    "zip_code": 57160,
+    "zip_code": 57230,
     "name_th": "หนองแรด",
     "name_en": "Nong Raet",
     "amphure_id": 5704,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -53431,7 +53691,7 @@
   },
   {
     "id": 630901,
-    "zip_code": 63000,
+    "zip_code": 63180,
     "name_th": "เชียงทอง",
     "name_en": "Chiang Thong",
     "amphure_id": 6309,
@@ -53441,7 +53701,7 @@
   },
   {
     "id": 630902,
-    "zip_code": 63000,
+    "zip_code": 63180,
     "name_th": "นาโบสถ์",
     "name_en": "Na Bot",
     "amphure_id": 6309,
@@ -53451,7 +53711,7 @@
   },
   {
     "id": 630903,
-    "zip_code": 63000,
+    "zip_code": 63180,
     "name_th": "ประดาง",
     "name_en": "Pradang",
     "amphure_id": 6309,
@@ -54153,10 +54413,10 @@
     "id": 640708,
     "zip_code": 64110,
     "name_th": "คลองยาง",
-    "name_en": "Khlong Yao",
+    "name_en": "Khlong Yang",
     "amphure_id": 6407,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -55257,7 +55517,7 @@
     "amphure_id": 6509,
     "created_at": "9/8/2019 03:33:09",
     "updated_at": "16/5/2022 06:31:31",
-    "deleted_at": null
+    "deleted_at": "25/9/2024 00:00:00"
   },
   {
     "id": 660101,
@@ -55881,12 +56141,12 @@
   },
   {
     "id": 660702,
-    "zip_code": 66140,
+    "zip_code": 66220,
     "name_th": "กำแพงดิน",
     "name_en": "Kamphaeng Din",
     "amphure_id": 6607,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -57253,10 +57513,10 @@
     "id": 671101,
     "zip_code": 67270,
     "name_th": "ทุ่งสมอ",
-    "name_en": "Khao Kho",
+    "name_en": "Thung Samo",
     "amphure_id": 6711,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -57273,10 +57533,10 @@
     "id": 671103,
     "zip_code": 67270,
     "name_th": "เขาค้อ",
-    "name_en": "Thung Samo",
+    "name_en": "Khao Kho",
     "amphure_id": 6711,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -58881,12 +59141,12 @@
   },
   {
     "id": 710604,
-    "zip_code": 71110,
+    "zip_code": 71000,
     "name_th": "ท่าล้อ",
     "name_en": "Tha Lo",
     "amphure_id": 7106,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -60141,22 +60401,22 @@
   },
   {
     "id": 720712,
-    "zip_code": 72190,
+    "zip_code": 72110,
     "name_th": "ทุ่งคอก",
     "name_en": "Thung Khok",
     "amphure_id": 7207,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 720713,
-    "zip_code": 72110,
+    "zip_code": 72190,
     "name_th": "หนองบ่อ",
     "name_en": "Nong Bo",
     "amphure_id": 7207,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -60271,12 +60531,12 @@
   },
   {
     "id": 720903,
-    "zip_code": 72160,
+    "zip_code": 71170,
     "name_th": "จรเข้สามพัน",
     "name_en": "Chorakhe Sam Phan",
     "amphure_id": 7209,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -60741,12 +61001,12 @@
   },
   {
     "id": 730206,
-    "zip_code": 73140,
+    "zip_code": 73180,
     "name_th": "สระสี่มุม",
     "name_en": "Sa Si Mum",
     "amphure_id": 7302,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -63231,12 +63491,12 @@
   },
   {
     "id": 770105,
-    "zip_code": 77000,
+    "zip_code": 77210,
     "name_th": "อ่าวน้อย",
     "name_en": "Ao Noi",
     "amphure_id": 7701,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -63821,12 +64081,12 @@
   },
   {
     "id": 800122,
-    "zip_code": 80290,
+    "zip_code": 80000,
     "name_th": "ท่าเรือ",
     "name_en": "Tha Ruea",
     "amphure_id": 8001,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -63961,12 +64221,12 @@
   },
   {
     "id": 800405,
-    "zip_code": 80150,
+    "zip_code": 80260,
     "name_th": "ไม้เรียง",
     "name_en": "Mai Riang",
     "amphure_id": 8004,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -63981,12 +64241,12 @@
   },
   {
     "id": 800407,
-    "zip_code": 80150,
+    "zip_code": 80260,
     "name_th": "นากะชะ",
     "name_en": "Na Kacha",
     "amphure_id": 8004,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -65361,12 +65621,12 @@
   },
   {
     "id": 802304,
-    "zip_code": 80190,
+    "zip_code": 80290,
     "name_th": "ทางพูน",
     "name_en": "Thang Phun",
     "amphure_id": 8023,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -65781,42 +66041,42 @@
   },
   {
     "id": 810701,
-    "zip_code": 81120,
+    "zip_code": 81190,
     "name_th": "ลำทับ",
     "name_en": "Lam Thap",
     "amphure_id": 8107,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 810702,
-    "zip_code": 81120,
+    "zip_code": 81190,
     "name_th": "ดินอุดม",
     "name_en": "Din Udom",
     "amphure_id": 8107,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 810703,
-    "zip_code": 81120,
+    "zip_code": 81190,
     "name_th": "ทุ่งไทรทอง",
     "name_en": "Thung Sai Thong",
     "amphure_id": 8107,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 810704,
-    "zip_code": 81120,
+    "zip_code": 81190,
     "name_th": "ดินแดง",
     "name_en": "Din Daeng",
     "amphure_id": 8107,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -66171,12 +66431,12 @@
   },
   {
     "id": 820504,
-    "zip_code": 82110,
+    "zip_code": 82190,
     "name_th": "บางม่วง",
     "name_en": "Bang Muang",
     "amphure_id": 8205,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -66371,12 +66631,12 @@
   },
   {
     "id": 820806,
-    "zip_code": 82120,
+    "zip_code": 82210,
     "name_th": "ลำแก่น",
     "name_en": "Lam Kaen",
     "amphure_id": 8208,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -66921,12 +67181,12 @@
   },
   {
     "id": 840503,
-    "zip_code": 84280,
+    "zip_code": 84360,
     "name_th": "เกาะเต่า",
     "name_en": "Koh Tao",
     "amphure_id": 8405,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -67841,22 +68101,22 @@
   },
   {
     "id": 841901,
-    "zip_code": 84180,
+    "zip_code": 84370,
     "name_th": "ตะกุกใต้",
     "name_en": "Takuk Tai",
     "amphure_id": 8419,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 841902,
-    "zip_code": 84180,
+    "zip_code": 84370,
     "name_th": "ตะกุกเหนือ",
     "name_en": "Takuk Nuea",
     "amphure_id": 8419,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -68281,12 +68541,12 @@
   },
   {
     "id": 860113,
-    "zip_code": 86000,
+    "zip_code": 86190,
     "name_th": "ขุนกระทิง",
     "name_en": "Khun Krathing",
     "amphure_id": 8601,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -69311,12 +69571,12 @@
   },
   {
     "id": 900505,
-    "zip_code": 90260,
+    "zip_code": 90150,
     "name_th": "ท่าม่วง",
     "name_en": "Tha Muang",
     "amphure_id": 9005,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -70121,12 +70381,12 @@
   },
   {
     "id": 901604,
-    "zip_code": 90115,
+    "zip_code": 90110,
     "name_th": "คลองหลา",
     "name_en": "Khlong La",
     "amphure_id": 9016,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -70521,12 +70781,12 @@
   },
   {
     "id": 920106,
-    "zip_code": 92000,
+    "zip_code": 92170,
     "name_th": "นาบินหลา",
     "name_en": "Na Bin La",
     "amphure_id": 9201,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -71931,42 +72191,42 @@
   },
   {
     "id": 931001,
-    "zip_code": 93110,
+    "zip_code": 93210,
     "name_th": "ป่าพะยอม",
     "name_en": "Pa Phayom",
     "amphure_id": 9310,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 931002,
-    "zip_code": 93110,
+    "zip_code": 93210,
     "name_th": "ลานข่อย",
     "name_en": "Lan Khoi",
     "amphure_id": 9310,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 931003,
-    "zip_code": 93110,
+    "zip_code": 93210,
     "name_th": "เกาะเต่า",
     "name_en": "Ko Tao",
     "amphure_id": 9310,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
     "id": 931004,
-    "zip_code": 93110,
+    "zip_code": 93210,
     "name_th": "บ้านพร้าว",
     "name_en": "Ban Phrao",
     "amphure_id": 9310,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -72411,12 +72671,12 @@
   },
   {
     "id": 940404,
-    "zip_code": 94130,
+    "zip_code": 94190,
     "name_th": "ดอน",
     "name_en": "Don",
     "amphure_id": 9404,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
@@ -72511,12 +72771,12 @@
   },
   {
     "id": 940504,
-    "zip_code": 94140,
+    "zip_code": 94190,
     "name_th": "กระหวะ",
     "name_en": "Krawa",
     "amphure_id": 9405,
     "created_at": "9/8/2019 03:33:09",
-    "updated_at": "16/5/2022 06:31:31",
+    "updated_at": "25/9/2024 00:00:00",
     "deleted_at": null
   },
   {
