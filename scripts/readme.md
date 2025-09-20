@@ -58,7 +58,7 @@ python3 scripts/1_export_file_format.py --indent 2 --overwrite
 
 ## 🧪 2_export_api.py
 
-[2_export_api.py](2_export_api.py) สคริปต์นี้่อ่านข้อมูลจาก `data/raw/*.json` แล้วส่งออกไฟล์ API ตามตัวอย่างที่คุณต้องการไปยัง `api/latest/`:
+[2_export_api.py](2_export_api.py) สคริปต์นี้ใช้ข้อมูลจาก `data/raw/*.json` แล้วส่งออกไฟล์ API ไปยัง `api/latest/`:
 
 - api/latest/province.json 
 - api/latest/district.json 
