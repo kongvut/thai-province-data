@@ -17,7 +17,7 @@
     - `fix-district-name`
     - `update-postal-code`
     - `add-new-district-data`
-3. ทำการแก้ไขหรือเพิ่มข้อมูล
+3. ทำการแก้ไขหรือเพิ่มข้อมูลที่ไฟล์ `data/raw/*.json`
 4. **ตรวจสอบข้อมูลก่อนส่ง PR**
    ```bash
    python3 scripts/0_validate_data.py --strict --fail-on-warn
