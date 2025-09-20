@@ -80,7 +80,7 @@
 
 **ตัวอย่าง Raw URL**
 ```
-https://raw.githubusercontent.com/kongvut/thai-province-data/main/api/latest/province.json
+https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json
 ```
 
 ---
@@ -89,7 +89,7 @@ https://raw.githubusercontent.com/kongvut/thai-province-data/main/api/latest/pro
 
 ```bash
 # ดูจังหวัดแรก ๆ
-curl -s https://raw.githubusercontent.com/kongvut/thai-province-data/main/api/latest/province.json | jq '.[0:3]'
+curl -s https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json | jq '.[0:3]'
 ```
 
 ```bash
@@ -109,7 +109,7 @@ python3 scripts/make.py
 ```python
 import requests
 
-url = "https://raw.githubusercontent.com/kongvut/thai-province-data/main/api/latest/province.json"
+url = "https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json"
 provinces = requests.get(url).json()
 
 print(provinces[0])
@@ -120,7 +120,7 @@ print(provinces[0])
 ```js
 import fetch from "node-fetch";
 
-const url = "https://raw.githubusercontent.com/kongvut/thai-province-data/main/api/latest/district.json";
+const url = "https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/district.json";
 const res = await fetch(url);
 const districts = await res.json();
 
