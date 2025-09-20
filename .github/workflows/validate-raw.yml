@@ -1,0 +1,95 @@
+name: Validate raw data
+
+on:
+  pull_request:
+    paths:
+      - "data/raw/**"
+      - "data/spec/**"
+      - "scripts/0_validate_data.py"
+      - ".github/workflows/validate-raw.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "data/raw/**"
+      - "data/spec/**"
+      - "scripts/0_validate_data.py"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Run validator (capture output)
+        id: validate
+        shell: bash
+        run: |
+          set -o pipefail
+          # รัน validator + เก็บ stdout/stderr ไว้ที่ไฟล์
+          python3 scripts/0_validate_data.py --strict --fail-on-warn \
+            > validation_output.txt 2>&1 || echo "EXIT_CODE=$?" >> ${GITHUB_OUTPUT}
+
+          # กำหนด exit code ถ้าไม่ว่าง (มี error) ใช้ค่าที่จับไว้
+          if grep -q '^EXIT_CODE=' ${GITHUB_OUTPUT}; then
+            exit 1
+          fi
+
+      - name: Upload validation output (artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-output
+          path: validation_output.txt
+
+      - name: Comment on PR when failed
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = fs.readFileSync('validation_output.txt', 'utf8');
+
+            // ตัดความยาวคอมเมนต์ไม่ให้ยาวเกิน (กันโดนตัด)
+            const MAX = 5000;
+            let truncated = false;
+            if (body.length > MAX) {
+              body = body.slice(0, MAX) + "\n...\n(truncated)";
+              truncated = true;
+            }
+
+            const prNumber = context.payload.pull_request.number;
+            const header = [
+              "❌ **Validation failed**",
+              "",
+              "**Summary**: The validator detected errors/warnings in the dataset.",
+              "Please review the details below and fix them. See CONTRIBUTING for guidance.",
+              "",
+              "```text",
+            ].join("\n");
+            const footer = [
+              "```",
+              "",
+              truncated ? "_Note: output truncated in comment; see uploaded artifact for full logs._" : "",
+              "Helpful doc: [CONTRIBUTING.md](https://github.com/kongvut/thai-province-data/blob/master/CONTRIBUTING.md)"
+            ].join("\n");
+
+            const comment = header + body + "\n" + footer;
+
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: prNumber,
+              body: comment
+            })
