@@ -20,6 +20,8 @@
 - [สคริปต์ & Automation](#-สคริปต์--automation)
 - [Diagram](#-diagram)
 - [Contributing](#-contributing)
+- [Documentation](#-documentation)
+- [Changelogs](#-changelogs)
 - [License](#-license)
 
 ---
@@ -156,6 +158,12 @@ erDiagram
 ## 🤝 Contributing
 - ยินดีรับ PR ทั้งแก้ไขข้อมูล เพิ่ม dataset ปรับ docs หรือเพิ่ม export format
 - โปรดอ่าน [CONTRIBUTING.md](CONTRIBUTING.md) ก่อนส่ง PR
+
+---
+
+## 📃 Documentation
+
+Documentation เอกสารประกอบสำหรับการใช้งานและการพัฒนาโปรเจกต์ `thai-province-data` [docs/readme.md](docs/readme.md)
 
 ---
 
