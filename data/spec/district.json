@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "District",
+  "description": "อำเภอ (District) ของประเทศไทย",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer", "description": "รหัสอำเภอ (Primary Key)" },
+    "name_th": { "type": "string", "maxLength": 150, "description": "ชื่ออำเภอ (ภาษาไทย)" },
+    "name_en": { "type": "string", "maxLength": 150, "description": "ชื่ออำเภอ (ภาษาอังกฤษ)" },
+    "province_id": { "type": "integer", "description": "FK → provinces.id" },
+    "created_at": { "type": ["string", "null"], "format": "date-time" },
+    "updated_at": { "type": ["string", "null"], "format": "date-time" },
+    "deleted_at": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "required": ["id", "name_th", "name_en", "province_id"]
+}

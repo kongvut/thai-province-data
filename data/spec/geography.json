@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Geography",
+  "description": "ภูมิภาค (Geography) ของประเทศไทย",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer", "description": "รหัสภูมิภาค (Primary Key)" },
+    "name": { "type": "string", "maxLength": 255, "description": "ชื่อภูมิภาค" }
+  },
+  "required": ["id", "name"]
+}

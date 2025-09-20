@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SubDistrict",
+  "description": "ตำบล (Sub-district) ของประเทศไทย",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer", "description": "รหัสตำบล (Primary Key)" },
+    "zip_code": { "type": "integer", "description": "รหัสไปรษณีย์ 5 หลัก" },
+    "name_th": { "type": "string", "maxLength": 150, "description": "ชื่อตำบล (ภาษาไทย)" },
+    "name_en": { "type": "string", "maxLength": 150, "description": "ชื่อตำบล (ภาษาอังกฤษ)" },
+    "district_id": { "type": "integer", "description": "FK → districts.id" },
+    "lat": { "type": ["number", "null"], "description": "ละติจูด (ถ้ามี)" },
+    "long": { "type": ["number", "null"], "description": "ลองจิจูด (ถ้ามี)" },
+    "created_at": { "type": ["string", "null"], "format": "date-time" },
+    "updated_at": { "type": ["string", "null"], "format": "date-time" },
+    "deleted_at": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "required": ["id", "zip_code", "name_th", "name_en", "district_id"]
+}
