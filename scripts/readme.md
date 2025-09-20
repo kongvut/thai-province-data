@@ -97,4 +97,4 @@ python3 scripts/make.py
 ```
 
 ## 🤝 Contributing
-- โปรดอ่าน [CONTRIBUTING.md](CONTRIBUTING.md) ก่อนส่ง PR
+- โปรดอ่าน [CONTRIBUTING.md](../CONTRIBUTING.md) ก่อนส่ง PR
