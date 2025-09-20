@@ -1,1 +1,26 @@
-/.idea
+# Virtual environment
+.venv/
+venv/
+
+# IDE / Editor config
+.idea/
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Logs / temp files
+*.log
+*.tmp
+
+# OS generated
+.DS_Store
+Thumbs.db
