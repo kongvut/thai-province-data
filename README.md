@@ -141,7 +141,7 @@ console.log(districts[0]);
 
 ## 🧭 Diagram
 
-ดูแผนภาพ ERD ที่ `docs/diagram.md`  
+ดูแผนภาพ ERD ที่ [docs/diagram.md](docs/diagram.md)
 ตัวอย่าง Mermaid:
 
 ```mermaid
