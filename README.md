@@ -27,6 +27,7 @@
 ---
 
 ## 📂 โครงสร้างโปรเจกต์
+
 ```
 ├── api
 │   ├── latest
@@ -138,6 +139,8 @@ console.log(districts[0]);
 - `scripts/1_export_file_format.py --overwrite` → export CSV/JSON/SQL/XLSX/XML
 - `scripts/2_export_api.py --overwrite` → build API JSON
 - `scripts/make.py` → pipeline รวมทุกขั้นตอน
+
+อ่านรายละเอียดเพิ่มเติม [scripts/readme.md](scripts/readme.md)
 
 ---
 
