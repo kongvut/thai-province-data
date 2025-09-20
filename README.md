@@ -159,5 +159,14 @@ erDiagram
 
 ---
 
+## 📜 Changelogs
+
+โปรเจกต์นี้มีการอัปเดตและปรับปรุงอย่างต่อเนื่อง  
+สามารถติดตามรายละเอียดการเปลี่ยนแปลงทั้งหมดได้ที่ [CHANGELOG.md](CHANGELOG.md)
+
+For more details, please see the [CHANGELOG.md](https://github.com/kongvut/thai-province-data/blob/master/CHANGELOG.md)
+
+---
+
 ## 📄 License
 [MIT License](LICENSE) © 2025 Kongvut Sangkla
