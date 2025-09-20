@@ -34,7 +34,7 @@
 
 ## 🖼 Diagram
 
-โครงสร้างความสัมพันธ์ (ERD) แสดงใน [docs/diagram.md](diagram.md) และ [docs/diagram.png](diagram.png)
+โครงสร้างความสัมพันธ์ (ERD) แสดงใน [docs/diagram.md](diagram.md)
 
 ```mermaid
 erDiagram
@@ -57,7 +57,7 @@ erDiagram
 
 **ตัวอย่างการเรียกใช้งาน**
 ```bash
-curl -s https://https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json | jq '.[0]'
+curl -s https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json | jq '.[0]'
 ```
 
 ### 2. ใช้ไฟล์ export
