@@ -73,36 +73,55 @@
 
 ## 🔌 ไฟล์ API พร้อมใช้งาน
 
-ไฟล์ใน `api/latest/` สามารถเรียกใช้งานตรงจาก GitHub Raw:
+API endpoints ใช้ไฟล์ใน [api/latest](https://github.com/kongvut/thai-province-data/tree/master/api/latest) สามารถเรียกใช้งานตรงจาก GitHub Raw:
 
 - `province.json`
+
+    ```
+    https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json
+    ```
 - `district.json`
+
+    ```
+    https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/district.json
+    ```
 - `sub_district.json`
+
+    ```
+    https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/sub_district.json
+    ```
 - `province_with_district_and_sub_district.json`
+
+    ```
+    https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province_with_district_and_sub_district.json
+    ```
 - `sub_district_with_district_and_province.json`
 
+    ```
+    https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/sub_district_with_district_and_province.json
+    ```
+
 **ตัวอย่าง Raw URL**
-```
-https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json
-```
-
----
-
-## ⚡ การใช้งานแบบรวดเร็ว
 
 ```bash
 # ดูจังหวัดแรก ๆ
 curl -s https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json | jq '.[0:3]'
 ```
 
-```bash
-# clone repo และรัน pipeline
-git clone https://github.com/kongvut/thai-province-data.git
-cd thai-province-data
-python3 -m venv .venv && source .venv/bin/activate
-pip install -U pandas openpyxl
-python3 scripts/make.py
-```
+## Fetch data demo by React
+
+ตัวอย่างการใช้งาน API [province_with_district_and_sub_district.json](https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province_with_district_and_sub_district.json) เพื่อสร้าง DropdownList
+
+> https://codesandbox.io/p/sandbox/thailand-province-demo-api-k3st7
+
+
+## 🗂 ประเภทไฟล์อื่น ๆ
+
+- [CSV](https://github.com/kongvut/thai-province-data/tree/master/formats/csv)
+- [JSON](https://github.com/kongvut/thai-province-data/tree/master/formats/json)
+- [SQL](https://github.com/kongvut/thai-province-data/tree/master/formats/sql)
+- [XLSX](https://github.com/kongvut/thai-province-data/tree/master/formats/xlsx)
+- [XML](https://github.com/kongvut/thai-province-data/tree/master/formats/xml)
 
 ---
 
