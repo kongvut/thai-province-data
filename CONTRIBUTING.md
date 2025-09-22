@@ -17,7 +17,9 @@
     - `fix-district-name`
     - `update-postal-code`
     - `add-new-district-data`
-3. ทำการแก้ไขหรือเพิ่มข้อมูลที่ไฟล์ `data/raw/*.json`
+3. ทำการแก้ไขหรือเพิ่มข้อมูลที่ไฟล์ (และอัปเดทเวลาเมื่อแก้ไขข้อมูล `updated_at`) `data/raw/*.json`
+
+    > note: รบกวนแก้ไขไฟล์ที่ `data/raw/*.json` เท่านั้น เพราะ API และ File format ต่าง ๆ จะถูก Generate อัตโนมัติในขั้นตอนที่ 4
 4. **ตรวจสอบข้อมูลก่อนส่ง PR**
    ```bash
    python3 scripts/0_validate_data.py --strict --fail-on-warn
