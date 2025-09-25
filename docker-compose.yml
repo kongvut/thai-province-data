@@ -1,0 +1,25 @@
+# สร้าง/อัปเดต image
+# docker compose build
+
+# รันตัวตรวจสอบ (ล้มทันทีหากมี warning/error)
+# docker compose run --rm validate
+
+# รัน pipeline เต็ม: validate → export formats → export api
+# docker compose run --rm make
+
+services:
+  validate:
+    build: .
+    image: thai-province-data:py311
+    command: python scripts/0_validate_data.py --strict --fail-on-warn
+    working_dir: /app
+    volumes:
+      - ./:/app:rw
+
+  make:
+    build: .
+    image: thai-province-data:py311
+    command: python scripts/make.py
+    working_dir: /app
+    volumes:
+      - ./:/app:rw
