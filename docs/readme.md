@@ -68,29 +68,6 @@ curl -s https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/
 - **SQL** → มี CREATE TABLE + INSERT
 - **XLSX** → ต้องติดตั้ง `pandas + openpyxl`
 - **XML** → สำหรับระบบที่ต้องการโครงสร้าง XML
-
-### 3. รัน pipeline เอง
-```bash
-python3 scripts/make.py
-```
-คำสั่งนี้จะ validate → export formats → export api
-
----
-
-## 🧑‍💻 สำหรับนักพัฒนา
-
-### ติดตั้ง environment
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -U pandas openpyxl
-```
-
-### รันสคริปต์แยก
-- ตรวจสอบข้อมูล: `python3 scripts/0_validate_data.py --strict --fail-on-warn`
-- export formats: `python3 scripts/1_export_file_format.py --overwrite`
-- export api: `python3 scripts/2_export_api.py --overwrite`
-
 ---
 
 ## 🤝 Contributing
