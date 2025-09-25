@@ -116,9 +116,9 @@ docker compose run --rm validate
 docker compose run --rm make
 ```
 
-### 4) โครงสร้างไฟล์ที่ใช้ร่วมกับ Docker
-- `Dockerfile` — กำหนด environment และ dependency
-- `docker-compose.yml` — service สำหรับ `validate` และ `make`
+### 4) อธิบายโครงสร้างไฟล์ที่ใช้ร่วมกับ Docker
+- [Dockerfile](/Dockerfile) — กำหนด environment และ dependency
+- [docker-compose.yml](/docker-compose.yml) — service สำหรับ `validate` และ `make`
 - mount โฟลเดอร์ปัจจุบัน (`./`) ไปยัง `/app` ใน container เพื่อให้แก้ไขข้อมูลใน repo แล้วสามารถรันได้ทันที
 
 > เหมาะสำหรับผู้ใช้ที่ต้องการความสะดวก ไม่ต้องติดตั้ง Python, pandas, openpyxl ในเครื่อง
