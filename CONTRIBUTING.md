@@ -25,6 +25,7 @@
    python3 scripts/0_validate_data.py --strict --fail-on-warn
    python3 scripts/make.py
    ```
+   > สำหรับผู้ที่ไม่ต้องการติดตั้ง Python และ dependency เอง สามารถใช้ Docker ได้ทันทีที่นี่ "[การใช้งานด้วย Docker](#1-build-image)"
 5. Commit การเปลี่ยนแปลงด้วยข้อความสั้น กระชับ:
    ```bash
    fix: correct zip code in sub_districts
@@ -85,6 +86,22 @@
 
 ---
 
+## 🧑‍💻 สำหรับนักพัฒนา
+
+### ติดตั้ง environment
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pandas openpyxl
+```
+
+### รันสคริปต์แยก
+- ตรวจสอบข้อมูล: `python3 scripts/0_validate_data.py --strict --fail-on-warn`
+- export formats: `python3 scripts/1_export_file_format.py --overwrite`
+- export api: `python3 scripts/2_export_api.py --overwrite`
+
+---
+
 ## 🧰 Automation Pipeline
 
 สามารถรัน pipeline ได้ด้วยคำสั่งเดียว:
@@ -99,8 +116,6 @@ Pipeline จะทำงานดังนี้:
 3. รัน `2_export_api.py --overwrite` อัปเดต API JSON
 
 ---
-
-> รายละเอียดเพิ่มเติมสำหรับนักพัฒนา "[การติดตั้ง environment สำหรับรัน scripts](./docs/readme.md)"
 
 ## 🐳 การใช้งานด้วย Docker
 
