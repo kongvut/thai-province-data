@@ -4,13 +4,60 @@
   "description": "อำเภอ (District) ของประเทศไทย",
   "type": "object",
   "properties": {
-    "id": { "type": "integer", "description": "รหัสอำเภอ (Primary Key)" },
-    "name_th": { "type": "string", "maxLength": 150, "description": "ชื่ออำเภอ (ภาษาไทย)" },
-    "name_en": { "type": "string", "maxLength": 150, "description": "ชื่ออำเภอ (ภาษาอังกฤษ)" },
-    "province_id": { "type": "integer", "description": "FK → provinces.id" },
-    "created_at": { "type": ["string", "null"], "format": "date-time" },
-    "updated_at": { "type": ["string", "null"], "format": "date-time" },
-    "deleted_at": { "type": ["string", "null"], "format": "date-time" }
+    "id": {
+      "type": "integer",
+      "description": "รหัสอำเภอ (Primary Key)"
+    },
+    "name_th": {
+      "type": "string",
+      "maxLength": 150,
+      "description": "ชื่ออำเภอ (ภาษาไทย)"
+    },
+    "name_en": {
+      "type": "string",
+      "maxLength": 150,
+      "description": "ชื่ออำเภอ (ภาษาอังกฤษ)"
+    },
+    "name_th_short": {
+      "type": "string",
+      "maxLength": 150,
+      "description": "ชื่ออำเภอแบบย่อ (ไม่มี เขต / อำเภอ)"
+    },
+    "name_en_short": {
+      "type": "string",
+      "maxLength": 150,
+      "description": "ชื่ออำเภอภาษาอังกฤษแบบย่อ (ไม่มี Khet / Amphoe)"
+    },
+    "province_id": {
+      "type": "integer",
+      "description": "FK → provinces.id"
+    },
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "deleted_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
   },
-  "required": ["id", "name_th", "name_en", "province_id"]
+  "required": [
+    "id",
+    "name_th",
+    "name_en",
+    "province_id"
+  ]
 }
