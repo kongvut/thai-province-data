@@ -1,13 +1,29 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "SubDistrict",
-  "description": "ตำบล (Sub-district) ของประเทศไทย",
+  "description": "ตำบล (Sub-district) ของประเทศไทย - สำหรับจังหวัดทั่วไป (กรุงเทพจะเป็นแขวง)",
   "type": "object",
   "properties": {
     "id": { "type": "integer", "description": "รหัสตำบล (Primary Key)" },
     "zip_code": { "type": "integer", "description": "รหัสไปรษณีย์ 5 หลัก" },
-    "name_th": { "type": "string", "maxLength": 150, "description": "ชื่อตำบล (ภาษาไทย)" },
-    "name_en": { "type": "string", "maxLength": 150, "description": "ชื่อตำบล (ภาษาอังกฤษ)" },
+    "name": {
+      "type": "object",
+      "description": "ชื่อตำบล (หลายภาษา)",
+      "properties": {
+        "th": { "type": "string", "maxLength": 150, "description": "ชื่อตำบล (ภาษาไทย)" },
+        "en": { "type": "string", "maxLength": 150, "description": "ชื่อตำบล (ภาษาอังกฤษ)" }
+      },
+      "required": ["th", "en"]
+    },
+    "prefix": {
+      "type": "object",
+      "description": "คำนำหน้า (หลายภาษา) - เช่น 'ตำบล', 'แขวง' สำหรับกรุงเทพ",
+      "properties": {
+        "th": { "type": "string", "maxLength": 50, "description": "เช่น 'ตำบล' (ภาษาไทย)" },
+        "en": { "type": "string", "maxLength": 50, "description": "เช่น 'Tambon' (ภาษาอังกฤษ)" }
+      },
+      "required": ["th", "en"]
+    },
     "district_id": { "type": "integer", "description": "FK → districts.id" },
     "lat": { "type": ["number", "null"], "description": "ละติจูด (ถ้ามี)" },
     "long": { "type": ["number", "null"], "description": "ลองจิจูด (ถ้ามี)" },
@@ -15,5 +31,5 @@
     "updated_at": { "type": ["string", "null"], "format": "date-time" },
     "deleted_at": { "type": ["string", "null"], "format": "date-time" }
   },
-  "required": ["id", "zip_code", "name_th", "name_en", "district_id"]
+  "required": ["id", "zip_code", "name", "prefix", "district_id"]
 }

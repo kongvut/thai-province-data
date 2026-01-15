@@ -1,8 +1,14 @@
 [
   {
     "id": 1,
-    "name_th": "กรุงเทพมหานคร",
-    "name_en": "Bangkok",
+    "name": {
+      "th": "กรุงเทพมหานคร",
+      "en": "Bangkok"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -10,8 +16,14 @@
   },
   {
     "id": 2,
-    "name_th": "สมุทรปราการ",
-    "name_en": "Samut Prakan",
+    "name": {
+      "th": "สมุทรปราการ",
+      "en": "Samut Prakan"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -19,8 +31,14 @@
   },
   {
     "id": 3,
-    "name_th": "นนทบุรี",
-    "name_en": "Nonthaburi",
+    "name": {
+      "th": "นนทบุรี",
+      "en": "Nonthaburi"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -28,8 +46,14 @@
   },
   {
     "id": 4,
-    "name_th": "ปทุมธานี",
-    "name_en": "Pathum Thani",
+    "name": {
+      "th": "ปทุมธานี",
+      "en": "Pathum Thani"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -37,8 +61,14 @@
   },
   {
     "id": 5,
-    "name_th": "พระนครศรีอยุธยา",
-    "name_en": "Phra Nakhon Si Ayutthaya",
+    "name": {
+      "th": "พระนครศรีอยุธยา",
+      "en": "Phra Nakhon Si Ayutthaya"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -46,8 +76,14 @@
   },
   {
     "id": 6,
-    "name_th": "อ่างทอง",
-    "name_en": "Ang Thong",
+    "name": {
+      "th": "อ่างทอง",
+      "en": "Ang Thong"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -55,8 +91,14 @@
   },
   {
     "id": 7,
-    "name_th": "ลพบุรี",
-    "name_en": "Lopburi",
+    "name": {
+      "th": "ลพบุรี",
+      "en": "Lopburi"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -64,8 +106,14 @@
   },
   {
     "id": 8,
-    "name_th": "สิงห์บุรี",
-    "name_en": "Sing Buri",
+    "name": {
+      "th": "สิงห์บุรี",
+      "en": "Sing Buri"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -73,8 +121,14 @@
   },
   {
     "id": 9,
-    "name_th": "ชัยนาท",
-    "name_en": "Chai Nat",
+    "name": {
+      "th": "ชัยนาท",
+      "en": "Chai Nat"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -82,8 +136,14 @@
   },
   {
     "id": 10,
-    "name_th": "สระบุรี",
-    "name_en": "Saraburi",
+    "name": {
+      "th": "สระบุรี",
+      "en": "Saraburi"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -91,8 +151,14 @@
   },
   {
     "id": 11,
-    "name_th": "ชลบุรี",
-    "name_en": "Chon Buri",
+    "name": {
+      "th": "ชลบุรี",
+      "en": "Chon Buri"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -100,8 +166,14 @@
   },
   {
     "id": 12,
-    "name_th": "ระยอง",
-    "name_en": "Rayong",
+    "name": {
+      "th": "ระยอง",
+      "en": "Rayong"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -109,8 +181,14 @@
   },
   {
     "id": 13,
-    "name_th": "จันทบุรี",
-    "name_en": "Chanthaburi",
+    "name": {
+      "th": "จันทบุรี",
+      "en": "Chanthaburi"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -118,8 +196,14 @@
   },
   {
     "id": 14,
-    "name_th": "ตราด",
-    "name_en": "Trat",
+    "name": {
+      "th": "ตราด",
+      "en": "Trat"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -127,8 +211,14 @@
   },
   {
     "id": 15,
-    "name_th": "ฉะเชิงเทรา",
-    "name_en": "Chachoengsao",
+    "name": {
+      "th": "ฉะเชิงเทรา",
+      "en": "Chachoengsao"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -136,8 +226,14 @@
   },
   {
     "id": 16,
-    "name_th": "ปราจีนบุรี",
-    "name_en": "Prachin Buri",
+    "name": {
+      "th": "ปราจีนบุรี",
+      "en": "Prachin Buri"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -145,8 +241,14 @@
   },
   {
     "id": 17,
-    "name_th": "นครนายก",
-    "name_en": "Nakhon Nayok",
+    "name": {
+      "th": "นครนายก",
+      "en": "Nakhon Nayok"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -154,8 +256,14 @@
   },
   {
     "id": 18,
-    "name_th": "สระแก้ว",
-    "name_en": "Sa Kaeo",
+    "name": {
+      "th": "สระแก้ว",
+      "en": "Sa Kaeo"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -163,8 +271,14 @@
   },
   {
     "id": 19,
-    "name_th": "นครราชสีมา",
-    "name_en": "Nakhon Ratchasima",
+    "name": {
+      "th": "นครราชสีมา",
+      "en": "Nakhon Ratchasima"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -172,8 +286,14 @@
   },
   {
     "id": 20,
-    "name_th": "บุรีรัมย์",
-    "name_en": "Buri Ram",
+    "name": {
+      "th": "บุรีรัมย์",
+      "en": "Buri Ram"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -181,8 +301,14 @@
   },
   {
     "id": 21,
-    "name_th": "สุรินทร์",
-    "name_en": "Surin",
+    "name": {
+      "th": "สุรินทร์",
+      "en": "Surin"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -190,8 +316,14 @@
   },
   {
     "id": 22,
-    "name_th": "ศรีสะเกษ",
-    "name_en": "Si Sa Ket",
+    "name": {
+      "th": "ศรีสะเกษ",
+      "en": "Si Sa Ket"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -199,8 +331,14 @@
   },
   {
     "id": 23,
-    "name_th": "อุบลราชธานี",
-    "name_en": "Ubon Ratchathani",
+    "name": {
+      "th": "อุบลราชธานี",
+      "en": "Ubon Ratchathani"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -208,8 +346,14 @@
   },
   {
     "id": 24,
-    "name_th": "ยโสธร",
-    "name_en": "Yasothon",
+    "name": {
+      "th": "ยโสธร",
+      "en": "Yasothon"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -217,8 +361,14 @@
   },
   {
     "id": 25,
-    "name_th": "ชัยภูมิ",
-    "name_en": "Chaiyaphum",
+    "name": {
+      "th": "ชัยภูมิ",
+      "en": "Chaiyaphum"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -226,8 +376,14 @@
   },
   {
     "id": 26,
-    "name_th": "อำนาจเจริญ",
-    "name_en": "Amnat Charoen",
+    "name": {
+      "th": "อำนาจเจริญ",
+      "en": "Amnat Charoen"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -235,8 +391,14 @@
   },
   {
     "id": 27,
-    "name_th": "หนองบัวลำภู",
-    "name_en": "Nong Bua Lam Phu",
+    "name": {
+      "th": "หนองบัวลำภู",
+      "en": "Nong Bua Lam Phu"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -244,8 +406,14 @@
   },
   {
     "id": 28,
-    "name_th": "ขอนแก่น",
-    "name_en": "Khon Kaen",
+    "name": {
+      "th": "ขอนแก่น",
+      "en": "Khon Kaen"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -253,8 +421,14 @@
   },
   {
     "id": 29,
-    "name_th": "อุดรธานี",
-    "name_en": "Udon Thani",
+    "name": {
+      "th": "อุดรธานี",
+      "en": "Udon Thani"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -262,8 +436,14 @@
   },
   {
     "id": 30,
-    "name_th": "เลย",
-    "name_en": "Loei",
+    "name": {
+      "th": "เลย",
+      "en": "Loei"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -271,8 +451,14 @@
   },
   {
     "id": 31,
-    "name_th": "หนองคาย",
-    "name_en": "Nong Khai",
+    "name": {
+      "th": "หนองคาย",
+      "en": "Nong Khai"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -280,8 +466,14 @@
   },
   {
     "id": 32,
-    "name_th": "มหาสารคาม",
-    "name_en": "Maha Sarakham",
+    "name": {
+      "th": "มหาสารคาม",
+      "en": "Maha Sarakham"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -289,8 +481,14 @@
   },
   {
     "id": 33,
-    "name_th": "ร้อยเอ็ด",
-    "name_en": "Roi Et",
+    "name": {
+      "th": "ร้อยเอ็ด",
+      "en": "Roi Et"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -298,8 +496,14 @@
   },
   {
     "id": 34,
-    "name_th": "กาฬสินธุ์",
-    "name_en": "Kalasin",
+    "name": {
+      "th": "กาฬสินธุ์",
+      "en": "Kalasin"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -307,8 +511,14 @@
   },
   {
     "id": 35,
-    "name_th": "สกลนคร",
-    "name_en": "Sakon Nakhon",
+    "name": {
+      "th": "สกลนคร",
+      "en": "Sakon Nakhon"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -316,8 +526,14 @@
   },
   {
     "id": 36,
-    "name_th": "นครพนม",
-    "name_en": "Nakhon Phanom",
+    "name": {
+      "th": "นครพนม",
+      "en": "Nakhon Phanom"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -325,8 +541,14 @@
   },
   {
     "id": 37,
-    "name_th": "มุกดาหาร",
-    "name_en": "Mukdahan",
+    "name": {
+      "th": "มุกดาหาร",
+      "en": "Mukdahan"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -334,8 +556,14 @@
   },
   {
     "id": 38,
-    "name_th": "เชียงใหม่",
-    "name_en": "Chiang Mai",
+    "name": {
+      "th": "เชียงใหม่",
+      "en": "Chiang Mai"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -343,8 +571,14 @@
   },
   {
     "id": 39,
-    "name_th": "ลำพูน",
-    "name_en": "Lamphun",
+    "name": {
+      "th": "ลำพูน",
+      "en": "Lamphun"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -352,8 +586,14 @@
   },
   {
     "id": 40,
-    "name_th": "ลำปาง",
-    "name_en": "Lampang",
+    "name": {
+      "th": "ลำปาง",
+      "en": "Lampang"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -361,8 +601,14 @@
   },
   {
     "id": 41,
-    "name_th": "อุตรดิตถ์",
-    "name_en": "Uttaradit",
+    "name": {
+      "th": "อุตรดิตถ์",
+      "en": "Uttaradit"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -370,8 +616,14 @@
   },
   {
     "id": 42,
-    "name_th": "แพร่",
-    "name_en": "Phrae",
+    "name": {
+      "th": "แพร่",
+      "en": "Phrae"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -379,8 +631,14 @@
   },
   {
     "id": 43,
-    "name_th": "น่าน",
-    "name_en": "Nan",
+    "name": {
+      "th": "น่าน",
+      "en": "Nan"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -388,8 +646,14 @@
   },
   {
     "id": 44,
-    "name_th": "พะเยา",
-    "name_en": "Phayao",
+    "name": {
+      "th": "พะเยา",
+      "en": "Phayao"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -397,8 +661,14 @@
   },
   {
     "id": 45,
-    "name_th": "เชียงราย",
-    "name_en": "Chiang Rai",
+    "name": {
+      "th": "เชียงราย",
+      "en": "Chiang Rai"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -406,8 +676,14 @@
   },
   {
     "id": 46,
-    "name_th": "แม่ฮ่องสอน",
-    "name_en": "Mae Hong Son",
+    "name": {
+      "th": "แม่ฮ่องสอน",
+      "en": "Mae Hong Son"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -415,8 +691,14 @@
   },
   {
     "id": 47,
-    "name_th": "นครสวรรค์",
-    "name_en": "Nakhon Sawan",
+    "name": {
+      "th": "นครสวรรค์",
+      "en": "Nakhon Sawan"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -424,8 +706,14 @@
   },
   {
     "id": 48,
-    "name_th": "อุทัยธานี",
-    "name_en": "Uthai Thani",
+    "name": {
+      "th": "อุทัยธานี",
+      "en": "Uthai Thani"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -433,8 +721,14 @@
   },
   {
     "id": 49,
-    "name_th": "กำแพงเพชร",
-    "name_en": "Kamphaeng Phet",
+    "name": {
+      "th": "กำแพงเพชร",
+      "en": "Kamphaeng Phet"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -442,8 +736,14 @@
   },
   {
     "id": 50,
-    "name_th": "ตาก",
-    "name_en": "Tak",
+    "name": {
+      "th": "ตาก",
+      "en": "Tak"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 4,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -451,8 +751,14 @@
   },
   {
     "id": 51,
-    "name_th": "สุโขทัย",
-    "name_en": "Sukhothai",
+    "name": {
+      "th": "สุโขทัย",
+      "en": "Sukhothai"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -460,8 +766,14 @@
   },
   {
     "id": 52,
-    "name_th": "พิษณุโลก",
-    "name_en": "Phitsanulok",
+    "name": {
+      "th": "พิษณุโลก",
+      "en": "Phitsanulok"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -469,8 +781,14 @@
   },
   {
     "id": 53,
-    "name_th": "พิจิตร",
-    "name_en": "Phichit",
+    "name": {
+      "th": "พิจิตร",
+      "en": "Phichit"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -478,8 +796,14 @@
   },
   {
     "id": 54,
-    "name_th": "เพชรบูรณ์",
-    "name_en": "Phetchabun",
+    "name": {
+      "th": "เพชรบูรณ์",
+      "en": "Phetchabun"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -487,8 +811,14 @@
   },
   {
     "id": 55,
-    "name_th": "ราชบุรี",
-    "name_en": "Ratchaburi",
+    "name": {
+      "th": "ราชบุรี",
+      "en": "Ratchaburi"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 4,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -496,8 +826,14 @@
   },
   {
     "id": 56,
-    "name_th": "กาญจนบุรี",
-    "name_en": "Kanchanaburi",
+    "name": {
+      "th": "กาญจนบุรี",
+      "en": "Kanchanaburi"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 4,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -505,8 +841,14 @@
   },
   {
     "id": 57,
-    "name_th": "สุพรรณบุรี",
-    "name_en": "Suphan Buri",
+    "name": {
+      "th": "สุพรรณบุรี",
+      "en": "Suphan Buri"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -514,8 +856,14 @@
   },
   {
     "id": 58,
-    "name_th": "นครปฐม",
-    "name_en": "Nakhon Pathom",
+    "name": {
+      "th": "นครปฐม",
+      "en": "Nakhon Pathom"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -523,8 +871,14 @@
   },
   {
     "id": 59,
-    "name_th": "สมุทรสาคร",
-    "name_en": "Samut Sakhon",
+    "name": {
+      "th": "สมุทรสาคร",
+      "en": "Samut Sakhon"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -532,8 +886,14 @@
   },
   {
     "id": 60,
-    "name_th": "สมุทรสงคราม",
-    "name_en": "Samut Songkhram",
+    "name": {
+      "th": "สมุทรสงคราม",
+      "en": "Samut Songkhram"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -541,8 +901,14 @@
   },
   {
     "id": 61,
-    "name_th": "เพชรบุรี",
-    "name_en": "Phetchaburi",
+    "name": {
+      "th": "เพชรบุรี",
+      "en": "Phetchaburi"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 4,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -550,8 +916,14 @@
   },
   {
     "id": 62,
-    "name_th": "ประจวบคีรีขันธ์",
-    "name_en": "Prachuap Khiri Khan",
+    "name": {
+      "th": "ประจวบคีรีขันธ์",
+      "en": "Prachuap Khiri Khan"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 4,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -559,8 +931,14 @@
   },
   {
     "id": 63,
-    "name_th": "นครศรีธรรมราช",
-    "name_en": "Nakhon Si Thammarat",
+    "name": {
+      "th": "นครศรีธรรมราช",
+      "en": "Nakhon Si Thammarat"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -568,8 +946,14 @@
   },
   {
     "id": 64,
-    "name_th": "กระบี่",
-    "name_en": "Krabi",
+    "name": {
+      "th": "กระบี่",
+      "en": "Krabi"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -577,8 +961,14 @@
   },
   {
     "id": 65,
-    "name_th": "พังงา",
-    "name_en": "Phangnga",
+    "name": {
+      "th": "พังงา",
+      "en": "Phangnga"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -586,8 +976,14 @@
   },
   {
     "id": 66,
-    "name_th": "ภูเก็ต",
-    "name_en": "Phuket",
+    "name": {
+      "th": "ภูเก็ต",
+      "en": "Phuket"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -595,8 +991,14 @@
   },
   {
     "id": 67,
-    "name_th": "สุราษฎร์ธานี",
-    "name_en": "Surat Thani",
+    "name": {
+      "th": "สุราษฎร์ธานี",
+      "en": "Surat Thani"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -604,8 +1006,14 @@
   },
   {
     "id": 68,
-    "name_th": "ระนอง",
-    "name_en": "Ranong",
+    "name": {
+      "th": "ระนอง",
+      "en": "Ranong"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -613,8 +1021,14 @@
   },
   {
     "id": 69,
-    "name_th": "ชุมพร",
-    "name_en": "Chumphon",
+    "name": {
+      "th": "ชุมพร",
+      "en": "Chumphon"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -622,8 +1036,14 @@
   },
   {
     "id": 70,
-    "name_th": "สงขลา",
-    "name_en": "Songkhla",
+    "name": {
+      "th": "สงขลา",
+      "en": "Songkhla"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -631,8 +1051,14 @@
   },
   {
     "id": 71,
-    "name_th": "สตูล",
-    "name_en": "Satun",
+    "name": {
+      "th": "สตูล",
+      "en": "Satun"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -640,8 +1066,14 @@
   },
   {
     "id": 72,
-    "name_th": "ตรัง",
-    "name_en": "Trang",
+    "name": {
+      "th": "ตรัง",
+      "en": "Trang"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -649,8 +1081,14 @@
   },
   {
     "id": 73,
-    "name_th": "พัทลุง",
-    "name_en": "Phatthalung",
+    "name": {
+      "th": "พัทลุง",
+      "en": "Phatthalung"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -658,8 +1096,14 @@
   },
   {
     "id": 74,
-    "name_th": "ปัตตานี",
-    "name_en": "Pattani",
+    "name": {
+      "th": "ปัตตานี",
+      "en": "Pattani"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -667,8 +1111,14 @@
   },
   {
     "id": 75,
-    "name_th": "ยะลา",
-    "name_en": "Yala",
+    "name": {
+      "th": "ยะลา",
+      "en": "Yala"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -676,8 +1126,14 @@
   },
   {
     "id": 76,
-    "name_th": "นราธิวาส",
-    "name_en": "Narathiwat",
+    "name": {
+      "th": "นราธิวาส",
+      "en": "Narathiwat"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
@@ -685,8 +1141,14 @@
   },
   {
     "id": 77,
-    "name_th": "บึงกาฬ",
-    "name_en": "Bueng Kan",
+    "name": {
+      "th": "บึงกาฬ",
+      "en": "Bueng Kan"
+    },
+    "prefix": {
+      "th": "",
+      "en": ""
+    },
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",

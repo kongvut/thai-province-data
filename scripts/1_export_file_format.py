@@ -51,12 +51,13 @@ SPEC_FILES = {
 # ---------------------------
 # Output file mapping and canonical column order
 # (order from SQL schema provided)
+# NOTE: For nested structures like name/prefix, CSV/SQL will flatten them
 # ---------------------------
 COLUMN_ORDER = {
     "geographies": ["id", "name"],
-    "provinces": ["id", "name_th", "name_en", "geography_id", "created_at", "updated_at", "deleted_at"],
-    "districts": ["id", "name_th", "name_en", "province_id", "created_at", "updated_at", "deleted_at"],
-    "sub_districts": ["id", "zip_code", "name_th", "name_en", "district_id", "lat", "long", "created_at", "updated_at", "deleted_at"],
+    "provinces": ["id", "name.th", "name.en", "prefix.th", "prefix.en", "geography_id", "created_at", "updated_at", "deleted_at"],
+    "districts": ["id", "name.th", "name.en", "prefix.th", "prefix.en", "province_id", "created_at", "updated_at", "deleted_at"],
+    "sub_districts": ["id", "zip_code", "name.th", "name.en", "prefix.th", "prefix.en", "district_id", "lat", "long", "created_at", "updated_at", "deleted_at"],
 }
 
 # ---------------------------
@@ -72,6 +73,8 @@ DDL = {
   `id` int(11) NOT NULL,
   `name_th` varchar(150) NOT NULL,
   `name_en` varchar(150) NOT NULL,
+  `prefix_th` varchar(50) DEFAULT '',
+  `prefix_en` varchar(50) DEFAULT '',
   `geography_id` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
@@ -82,6 +85,8 @@ DDL = {
   `id` int(11) NOT NULL,
   `name_th` varchar(150) NOT NULL,
   `name_en` varchar(150) NOT NULL,
+  `prefix_th` varchar(50) DEFAULT '',
+  `prefix_en` varchar(50) DEFAULT '',
   `province_id` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
@@ -93,6 +98,8 @@ DDL = {
   `zip_code` int(11) NOT NULL,
   `name_th` varchar(150) NOT NULL,
   `name_en` varchar(150) NOT NULL,
+  `prefix_th` varchar(50) DEFAULT '',
+  `prefix_en` varchar(50) DEFAULT '',
   `district_id` int(11) NOT NULL,
   `lat` double DEFAULT NULL,
   `long` double DEFAULT NULL,
@@ -136,26 +143,62 @@ def sql_escape(value: Any) -> str:
     return f"'{s}'"
 
 def to_rows_in_order(rows: List[Dict[str, Any]], order: List[str]) -> List[List[Any]]:
+    """Convert rows to 2D array with flattened nested objects for dot-notation columns."""
     out = []
     for r in rows:
-        out.append([r.get(col, None) for col in order])
+        row = []
+        for col in order:
+            if "." in col:
+                # Nested path like "name.th" or "prefix.en"
+                parts = col.split(".", 1)
+                obj = r.get(parts[0])
+                if isinstance(obj, dict):
+                    value = obj.get(parts[1], None)
+                else:
+                    value = None
+            else:
+                value = r.get(col, None)
+            row.append(value)
+        out.append(row)
     return out
 
 def write_csv(path: str, headers: List[str], rows2d: List[List[Any]]):
+    # Convert dot notation to readable column names for CSV
+    csv_headers = []
+    for h in headers:
+        if h == "name.th":
+            csv_headers.append("name_th")
+        elif h == "name.en":
+            csv_headers.append("name_en")
+        elif h == "prefix.th":
+            csv_headers.append("prefix_th")
+        elif h == "prefix.en":
+            csv_headers.append("prefix_en")
+        else:
+            csv_headers.append(h)
+    
     with open(path, "w", encoding="utf-8", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(headers)
+        writer.writerow(csv_headers)
         for row in rows2d:
             writer.writerow([("" if v is None else v) for v in row])
 
 def write_sql(path: str, table: str, headers: List[str], rows2d: List[List[Any]], include_create: bool):
+    # Convert dot notation to underscore notation for SQL column names
+    sql_headers = []
+    for h in headers:
+        if "." in h:
+            sql_headers.append(h.replace(".", "_"))
+        else:
+            sql_headers.append(h)
+    
     with open(path, "w", encoding="utf-8") as f:
         if include_create:
             f.write(DDL[table].rstrip() + "\n\n")
         if not rows2d:
             return
         # batch inserts for readability
-        f.write(f"INSERT INTO `{table}` ({', '.join('`'+h+'`' for h in headers)}) VALUES\n")
+        f.write(f"INSERT INTO `{table}` ({', '.join('`'+h+'`' for h in sql_headers)}) VALUES\n")
         lines = []
         for row in rows2d:
             vals = ", ".join(sql_escape(v) for v in row)

@@ -1,16 +1,32 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "District",
-  "description": "อำเภอ (District) ของประเทศไทย",
+  "description": "อำเภอ (District) ของประเทศไทย - สำหรับจังหวัดทั่วไป (พื้นที่อื่นจะเป็นเขต)",
   "type": "object",
   "properties": {
     "id": { "type": "integer", "description": "รหัสอำเภอ (Primary Key)" },
-    "name_th": { "type": "string", "maxLength": 150, "description": "ชื่ออำเภอ (ภาษาไทย)" },
-    "name_en": { "type": "string", "maxLength": 150, "description": "ชื่ออำเภอ (ภาษาอังกฤษ)" },
+    "name": {
+      "type": "object",
+      "description": "ชื่ออำเภอ (หลายภาษา)",
+      "properties": {
+        "th": { "type": "string", "maxLength": 150, "description": "ชื่ออำเภอ (ภาษาไทย)" },
+        "en": { "type": "string", "maxLength": 150, "description": "ชื่ออำเภอ (ภาษาอังกฤษ)" }
+      },
+      "required": ["th", "en"]
+    },
+    "prefix": {
+      "type": "object",
+      "description": "คำนำหน้า (หลายภาษา) - เช่น 'อำเภอ', 'เขต' สำหรับกรุงเทพ",
+      "properties": {
+        "th": { "type": "string", "maxLength": 50, "description": "เช่น 'อำเภอ' (ภาษาไทย)" },
+        "en": { "type": "string", "maxLength": 50, "description": "เช่น 'Amphoe' (ภาษาอังกฤษ)" }
+      },
+      "required": ["th", "en"]
+    },
     "province_id": { "type": "integer", "description": "FK → provinces.id" },
     "created_at": { "type": ["string", "null"], "format": "date-time" },
     "updated_at": { "type": ["string", "null"], "format": "date-time" },
     "deleted_at": { "type": ["string", "null"], "format": "date-time" }
   },
-  "required": ["id", "name_th", "name_en", "province_id"]
+  "required": ["id", "name", "prefix", "province_id"]
 }

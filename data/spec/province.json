@@ -5,12 +5,28 @@
   "type": "object",
   "properties": {
     "id": { "type": "integer", "description": "รหัสจังหวัด (Primary Key)" },
-    "name_th": { "type": "string", "maxLength": 150, "description": "ชื่อจังหวัด (ภาษาไทย)" },
-    "name_en": { "type": "string", "maxLength": 150, "description": "ชื่อจังหวัด (ภาษาอังกฤษ)" },
+    "name": {
+      "type": "object",
+      "description": "ชื่อจังหวัด (หลายภาษา)",
+      "properties": {
+        "th": { "type": "string", "maxLength": 150, "description": "ชื่อจังหวัด (ภาษาไทย)" },
+        "en": { "type": "string", "maxLength": 150, "description": "ชื่อจังหวัด (ภาษาอังกฤษ)" }
+      },
+      "required": ["th", "en"]
+    },
+    "prefix": {
+      "type": "object",
+      "description": "คำนำหน้า (หลายภาษา) - จังหวัดปกติจะไม่มี prefix (ค่าว่าง)",
+      "properties": {
+        "th": { "type": "string", "maxLength": 50, "description": "ปกติว่าง (\"\") สำหรับจังหวัด" },
+        "en": { "type": "string", "maxLength": 50, "description": "ปกติว่าง (\"\") สำหรับจังหวัด" }
+      },
+      "required": ["th", "en"]
+    },
     "geography_id": { "type": "integer", "description": "FK → geographies.id" },
     "created_at": { "type": ["string", "null"], "format": "date-time" },
     "updated_at": { "type": ["string", "null"], "format": "date-time" },
     "deleted_at": { "type": ["string", "null"], "format": "date-time" }
   },
-  "required": ["id", "name_th", "name_en", "geography_id"]
+  "required": ["id", "name", "prefix", "geography_id"]
 }

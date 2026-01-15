@@ -19,13 +19,13 @@ RAW_FILES = {
 
 # Desired key orders for prettier, consistent JSON outputs
 ORDER_PROVINCE = [
-    "id", "name_th", "name_en", "geography_id", "created_at", "updated_at", "deleted_at"
+    "id", "name", "prefix", "geography_id", "created_at", "updated_at", "deleted_at"
 ]
 ORDER_DISTRICT = [
-    "id", "name_th", "name_en", "province_id", "created_at", "updated_at", "deleted_at"
+    "id", "name", "prefix", "short_prefix", "province_id", "created_at", "updated_at", "deleted_at"
 ]
 ORDER_SUB_DISTRICT = [
-    "id", "zip_code", "name_th", "name_en", "district_id", "lat", "long",
+    "id", "zip_code", "name", "prefix", "short_prefix", "district_id", "lat", "long",
     "created_at", "updated_at", "deleted_at"
 ]
 
