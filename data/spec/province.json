@@ -5,6 +5,7 @@
   "type": "object",
   "properties": {
     "id": { "type": "integer", "description": "รหัสจังหวัด (Primary Key)" },
+    "code": { "type": "string", "maxLength": 2, "description": "รหัสจังหวัด (ตัวเลข 2 หลัก)" },
     "name_th": { "type": "string", "maxLength": 150, "description": "ชื่อจังหวัด (ภาษาไทย)" },
     "name_en": { "type": "string", "maxLength": 150, "description": "ชื่อจังหวัด (ภาษาอังกฤษ)" },
     "geography_id": { "type": "integer", "description": "FK → geographies.id" },
@@ -12,5 +13,5 @@
     "updated_at": { "type": ["string", "null"], "format": "date-time" },
     "deleted_at": { "type": ["string", "null"], "format": "date-time" }
   },
-  "required": ["id", "name_th", "name_en", "geography_id"]
+  "required": ["id", "code", "name_th", "name_en", "geography_id"]
 }

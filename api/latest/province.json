@@ -6,7 +6,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "10"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "11"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "12"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "13"
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "14"
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "15"
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "16"
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "17"
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "18"
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "19"
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "20"
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "21"
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "22"
   },
   {
     "id": 14,
@@ -123,7 +136,8 @@
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "23"
   },
   {
     "id": 15,
@@ -132,7 +146,8 @@
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "24"
   },
   {
     "id": 16,
@@ -141,7 +156,8 @@
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "25"
   },
   {
     "id": 17,
@@ -150,7 +166,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "26"
   },
   {
     "id": 18,
@@ -159,7 +176,8 @@
     "geography_id": 5,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "27"
   },
   {
     "id": 19,
@@ -168,7 +186,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "30"
   },
   {
     "id": 20,
@@ -177,7 +196,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "31"
   },
   {
     "id": 21,
@@ -186,7 +206,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "32"
   },
   {
     "id": 22,
@@ -195,7 +216,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "33"
   },
   {
     "id": 23,
@@ -204,7 +226,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "34"
   },
   {
     "id": 24,
@@ -213,7 +236,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "35"
   },
   {
     "id": 25,
@@ -222,7 +246,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "36"
   },
   {
     "id": 26,
@@ -231,7 +256,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "37"
   },
   {
     "id": 27,
@@ -240,7 +266,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "39"
   },
   {
     "id": 28,
@@ -249,7 +276,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "40"
   },
   {
     "id": 29,
@@ -258,7 +286,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "41"
   },
   {
     "id": 30,
@@ -267,7 +296,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "42"
   },
   {
     "id": 31,
@@ -276,7 +306,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "43"
   },
   {
     "id": 32,
@@ -285,7 +316,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "44"
   },
   {
     "id": 33,
@@ -294,7 +326,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "45"
   },
   {
     "id": 34,
@@ -303,7 +336,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "46"
   },
   {
     "id": 35,
@@ -312,7 +346,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "47"
   },
   {
     "id": 36,
@@ -321,7 +356,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "48"
   },
   {
     "id": 37,
@@ -330,7 +366,8 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "49"
   },
   {
     "id": 38,
@@ -339,7 +376,8 @@
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "50"
   },
   {
     "id": 39,
@@ -348,7 +386,8 @@
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "51"
   },
   {
     "id": 40,
@@ -357,7 +396,8 @@
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "52"
   },
   {
     "id": 41,
@@ -366,7 +406,8 @@
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "53"
   },
   {
     "id": 42,
@@ -375,7 +416,8 @@
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "54"
   },
   {
     "id": 43,
@@ -384,7 +426,8 @@
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "55"
   },
   {
     "id": 44,
@@ -393,7 +436,8 @@
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "56"
   },
   {
     "id": 45,
@@ -402,7 +446,8 @@
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "57"
   },
   {
     "id": 46,
@@ -411,7 +456,8 @@
     "geography_id": 1,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "58"
   },
   {
     "id": 47,
@@ -420,7 +466,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "60"
   },
   {
     "id": 48,
@@ -429,7 +476,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "61"
   },
   {
     "id": 49,
@@ -438,7 +486,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "62"
   },
   {
     "id": 50,
@@ -447,7 +496,8 @@
     "geography_id": 4,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "63"
   },
   {
     "id": 51,
@@ -456,7 +506,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "64"
   },
   {
     "id": 52,
@@ -465,7 +516,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "65"
   },
   {
     "id": 53,
@@ -474,7 +526,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "66"
   },
   {
     "id": 54,
@@ -483,7 +536,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "67"
   },
   {
     "id": 55,
@@ -492,7 +546,8 @@
     "geography_id": 4,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "70"
   },
   {
     "id": 56,
@@ -501,7 +556,8 @@
     "geography_id": 4,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "71"
   },
   {
     "id": 57,
@@ -510,7 +566,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "72"
   },
   {
     "id": 58,
@@ -519,7 +576,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "73"
   },
   {
     "id": 59,
@@ -528,7 +586,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "74"
   },
   {
     "id": 60,
@@ -537,7 +596,8 @@
     "geography_id": 2,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "75"
   },
   {
     "id": 61,
@@ -546,7 +606,8 @@
     "geography_id": 4,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "76"
   },
   {
     "id": 62,
@@ -555,7 +616,8 @@
     "geography_id": 4,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "77"
   },
   {
     "id": 63,
@@ -564,7 +626,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "80"
   },
   {
     "id": 64,
@@ -573,7 +636,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "81"
   },
   {
     "id": 65,
@@ -582,7 +646,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "82"
   },
   {
     "id": 66,
@@ -591,7 +656,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "83"
   },
   {
     "id": 67,
@@ -600,7 +666,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "84"
   },
   {
     "id": 68,
@@ -609,7 +676,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "85"
   },
   {
     "id": 69,
@@ -618,7 +686,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "86"
   },
   {
     "id": 70,
@@ -627,7 +696,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "90"
   },
   {
     "id": 71,
@@ -636,7 +706,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "91"
   },
   {
     "id": 72,
@@ -645,7 +716,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "92"
   },
   {
     "id": 73,
@@ -654,7 +726,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "93"
   },
   {
     "id": 74,
@@ -663,7 +736,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "94"
   },
   {
     "id": 75,
@@ -672,7 +746,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "95"
   },
   {
     "id": 76,
@@ -681,7 +756,8 @@
     "geography_id": 6,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "96"
   },
   {
     "id": 77,
@@ -690,6 +766,7 @@
     "geography_id": 3,
     "created_at": "2019-08-09T03:33:09.000+07:00",
     "updated_at": "2025-09-20T06:31:26.000+07:00",
-    "deleted_at": null
+    "deleted_at": null,
+    "code": "97"
   }
 ]
