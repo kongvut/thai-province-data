@@ -2,7 +2,7 @@
 
 Pipeline: `data/raw/` + `data/spec/` → `formats/` + `api/latest/`
 รันทั้ง pipeline: **`docker compose run --rm make`** (recommended, no local setup)
-หรือ `python3 scripts/make.py` (local Python — ต้องมี `pandas` + `openpyxl`; ดู [CONTRIBUTING.md](../CONTRIBUTING.md))
+หรือ `python3 scripts/make.py` (local Python — ต้องมี `pandas` + `openpyxl`)
 
 | script | ทำอะไร | flags |
 |---|---|---|
