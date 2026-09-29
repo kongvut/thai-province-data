@@ -15,6 +15,8 @@
 ### Notes
 - ไม่มีผลต่อ `api/latest/` — geography ไม่ได้ถูก export เป็น API file (มีแค่ `province.geography_id` แบบ int ซึ่งไม่เปลี่ยน)
 - เป็น consistency fix ปิดท้าย v3 (v3.0.0 ปล่อย geography เป็น flat string ไว้ก่อน)
+- **Consumer ที่ยังต้องใช้ `formats/csv/geographies.csv` แบบ column เดิม** (`id,name`): ใช้ [`formats-v2/csv/geographies.csv`](formats-v2/csv/geographies.csv) — snapshot v2 เก็บ shape เดิมไว้ และ shape นี้เหมือนกันทุกประการระหว่าง v2 กับ v3.0.0 (ยังไม่ถูกแก้จนกระทั่ง v3.1) หรือ pin `refs/tags/v3.0.0` ได้
+- ไม่ freeze `formats-v3/` — geography มี 6 แถว การ freeze ทั้ง folder เพื่อ table เดียวซ้ำซ้อนกับข้อมูลอื่นที่ไม่เปลี่ยน; ถ้าต้องการ shape เก่าใช้ v2 snapshot พอ
 
 ---
 
