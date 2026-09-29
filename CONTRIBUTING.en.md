@@ -17,11 +17,12 @@ This is **open data** aggregated from official sources (Department of Provincial
    ```
    Naming: `fix-<entity>-<short-issue>` or `add-<new-entity>` (e.g., `add-district-kanlapaphruek`, `update-sub-district-spelling`).
 3. **Edit `data/raw/*.json` only** (also bump `updated_at` on touched rows). `formats/` and `api/latest/` are auto-regenerated artifacts.
-4. **Validate + regenerate**:
+4. **Validate + regenerate** (Docker — no local setup needed):
    ```bash
-   python3 scripts/make.py
+   docker compose build              # first time only (build image)
+   docker compose run --rm make      # validate + export every time
    ```
-   (or `docker compose run --rm make` — see [Docker](#docker-no-pythondependencies-to-install))
+   (No Docker? See [Pipeline (Python local)](#pipeline-python-local).)
 5. **Commit** with short conventional prefixes:
    - `fix(data): correct zip code for sub_district 102601`
    - `add(data): new district กัลยาณิวัฒนา in Chiang Mai`
@@ -94,7 +95,19 @@ Schema-changing PRs (add/rename field) must be discussed in an issue before open
 
 ---
 
-## Environment setup
+## Pipeline (Docker — recommended)
+
+No Python/pandas/openpyxl install needed; environment matches CI.
+
+```bash
+docker compose build                    # first time only (image build)
+docker compose run --rm validate        # validator only (strict + fail-on-warn)
+docker compose run --rm make            # validate → export formats → export api
+```
+
+The repo is volume-mounted at `./:/app:rw` — edit `data/raw/*.json` on the host, the container sees it instantly, and regenerated outputs (`formats/`, `api/latest/`) write back into the same host directory.
+
+**Fallback — Python local** (no Docker / working offline):
 
 ```bash
 python3 -m venv .venv
@@ -102,11 +115,7 @@ source .venv/bin/activate
 pip install -U pandas openpyxl
 ```
 
-(`pandas` + `openpyxl` are needed for `.xlsx` export; other scripts run on stdlib only.)
-
-## Pipeline
-
-Run the whole pipeline (validate → export formats → export api) in one command:
+Run the whole pipeline:
 
 ```bash
 python3 scripts/make.py
@@ -120,17 +129,7 @@ python3 scripts/1_export_file_format.py --overwrite            # CSV/SQL/XLSX/JS
 python3 scripts/2_export_api.py --overwrite                    # api/latest/*.json
 ```
 
-If validation fails, `make.py` stops immediately with exit code 1 (CI fails the same way).
-
-## Docker (no Python/dependencies to install)
-
-```bash
-docker compose build                    # installs pandas + openpyxl inside the image
-docker compose run --rm validate        # validator only (strict + fail-on-warn)
-docker compose run --rm make            # full pipeline
-```
-
-The repo is volume-mounted at `./:/app:rw` — edit files on the host, the container sees them instantly.
+If validation fails, `make.py` exits 1 immediately (CI fails the same way).
 
 ## License
 

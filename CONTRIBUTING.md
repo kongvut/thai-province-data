@@ -17,11 +17,12 @@
    ```
    ชื่อที่แนะนำ: `fix-<entity>-<short-issue>` หรือ `add-<new-entity>` (เช่น `add-district-kanlapaphruek`, `update-sub-district-spelling`)
 3. **แก้ที่ `data/raw/*.json` เท่านั้น** (พร้อมอัปเดต `updated_at` ของแถวที่แก้) — `formats/` และ `api/latest/` เป็น artifact regenerated อัตโนมัติ
-4. **Validate + regen**:
+4. **Validate + regen** (ใช้ Docker — ไม่ต้อง setup):
    ```bash
-   python3 scripts/make.py
+   docker compose build              # ครั้งแรกเท่านั้น
+   docker compose run --rm make      # validate + export ทุกครั้ง
    ```
-   (หรือ `docker compose run --rm make` — ดู [Docker](#docker-ไม่ต้องติดตั้ง-python-dependencies-เอง))
+   (ถ้าไม่สะดวกใช้ Docker → ดู [Pipeline (Python local)](#pipeline-python-local))
 5. **Commit** — ใช้ conventional commit สั้น ๆ เช่น:
    - `fix(data): correct zip code for sub_district 102601`
    - `add(data): new district กัลยาณิวัฒนา in Chiang Mai`
@@ -94,7 +95,19 @@ PR ที่มี schema change (field add/rename) ต้อง discuss เป�
 
 ---
 
-## ติดตั้ง environment
+## Pipeline (Docker — recommended)
+
+ไม่ต้องติดตั้ง Python/pandas/openpyxl เอง; environment ตรงกับ CI
+
+```bash
+docker compose build                    # ครั้งแรกเท่านั้น (สร้าง image)
+docker compose run --rm validate        # validate อย่างเดียว (strict + fail-on-warn)
+docker compose run --rm make            # validate → export formats → export api
+```
+
+repo ถูก volume-mount ที่ `./:/app:rw` — แก้ไข `data/raw/*.json` บน host ได้เลย, container เห็นผลทันที และ regen outputs (`formats/`, `api/latest/`) เขียนกลับเข้า host directory เดิม
+
+**Fallback — Python local** (Docker ไม่ได้ / ทำงาน offline):
 
 ```bash
 python3 -m venv .venv
@@ -102,11 +115,7 @@ source .venv/bin/activate
 pip install -U pandas openpyxl
 ```
 
-(`pandas` + `openpyxl` จำเป็นสำหรับ export `.xlsx`; script ตัวอื่นใช้ stdlib)
-
-## Pipeline
-
-รันทั้ง pipeline (validate → export formats → export api) ทีละคำสั่งเดียว:
+รันทั้ง pipeline:
 
 ```bash
 python3 scripts/make.py
@@ -120,17 +129,7 @@ python3 scripts/1_export_file_format.py --overwrite            # CSV/SQL/XLSX/JS
 python3 scripts/2_export_api.py --overwrite                    # api/latest/*.json
 ```
 
-ถ้า validate fail → make.py หยุดทันที, exit code 1 (CI ก็ fail เช่นกัน)
-
-## Docker (ไม่ต้องติดตั้ง Python/dependencies เอง)
-
-```bash
-docker compose build                    # ติดตั้ง pandas + openpyxl ภายใน container
-docker compose run --rm validate        # รัน validator อย่างเดียว (strict + fail-on-warn)
-docker compose run --rm make            # รัน pipeline เต็ม
-```
-
-volume mount `./:/app:rw` — แก้ไขไฟล์ใน repo บน host ได้เลย, container เห็นผลทันที
+ถ้า validate fail → make.py หยุดทันที exit code 1 (CI fail แบบเดียวกัน)
 
 ## License
 

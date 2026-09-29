@@ -101,18 +101,22 @@ const displayTh = `${d.prefix.th}${d.name.th}`;   // "เขตพระนค�
 
 ## Pipeline
 
-```bash
-python3 scripts/make.py        # validate → export formats → export api
-```
-
-Or each step individually — see [scripts/readme.md](scripts/readme.md) for details.
-
-**Docker** (no need to install Python/pandas/openpyxl locally):
+**Recommended: Docker** (no Python/dependency setup; matches CI):
 
 ```bash
 docker compose build
 docker compose run --rm make
 ```
+
+**Local Python** (if Docker is inconvenient — requires `pandas` + `openpyxl`):
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -U pandas openpyxl
+python3 scripts/make.py
+```
+
+Per-script details → [scripts/readme.md](scripts/readme.md)
 
 ---
 

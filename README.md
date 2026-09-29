@@ -101,18 +101,22 @@ const displayTh = `${d.prefix.th}${d.name.th}`;   // "เขตพระนค�
 
 ## Pipeline
 
-```bash
-python3 scripts/make.py        # validate → export formats → export api
-```
-
-หรือทีละ step — ดูรายละเอียด script ที่ [scripts/readme.md](scripts/readme.md)
-
-**Docker** (ไม่ต้องติดตั้ง Python/pandas/openpyxl เอง):
+**แนะนำ: Docker** (ไม่ต้อง setup Python/dependencies เอง; ตรงกับ CI):
 
 ```bash
 docker compose build
 docker compose run --rm make
 ```
+
+**Local Python** (ถ้าไม่สะดวกใช้ Docker — ต้องมี `pandas` + `openpyxl`):
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -U pandas openpyxl
+python3 scripts/make.py
+```
+
+รายละเอียด script ทีละ step → [scripts/readme.md](scripts/readme.md)
 
 ---
 
