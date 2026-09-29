@@ -40,14 +40,16 @@
 
 - `data/raw/` → ไฟล์ต้นทาง (JSON array)
 - `data/spec/` → JSON Schema ของแต่ละตาราง
-- `formats/` → ไฟล์ export หลายรูปแบบ (csv/json/sql/xlsx/xml)
-- `api/latest/` → API JSON ที่ build แล้วจาก raw data
+- `formats/` → ไฟล์ export หลายรูปแบบ (csv/json/sql/xlsx/xml) — v3 nested
+- `formats-v2/` → snapshot ของ v2 formats (legacy, อย่าแก้)
+- `api/latest/` → API JSON ที่ build แล้วจาก raw data (v3 nested)
+- `api/v2/` → snapshot ของ v2 API (legacy, อย่าแก้)
 
 ---
 
 ## ✅ สิ่งที่ทำได้
 
-- แก้ไขข้อมูลสะกดผิด (`name_th`, `name_en`)
+- แก้ไขข้อมูลสะกดผิด (`name.th`, `name.en`)
 - ปรับปรุง **รหัสไปรษณีย์ / lat / long**
 - เพิ่มข้อมูลใหม่จาก **หน่วยงานรัฐ/แหล่งทางการ**
 - ปรับปรุง **เอกสาร** (README, Docs, Schema)
@@ -60,6 +62,10 @@
 
 - ต้องคง **schema** ตามที่กำหนดใน `data/spec/`
 - ห้ามเปลี่ยนชื่อคอลัมน์/keys โดยพลการ
+- **district/sub_district row ใหม่** ต้องใส่ `prefix` ให้ถูกประเภท:
+  - กทม. (province_id=1): district `prefix: {th:"เขต", en:"Khet"}`, sub_district `prefix: {th:"แขวง", en:"Khwaeng"}`
+  - ต่างจังหวัด: district `prefix: {th:"อำเภอ", en:"Amphoe"}`, sub_district `prefix: {th:"ตำบล", en:"Tambon"}`
+  - `name.th` เก็บ base name เท่านั้น **ห้าม** ใส่ prefix ติดมาในชื่อ
 - ข้อมูลใหม่ควรมี **reference ที่ชัดเจน**
 - หลีกเลี่ยงการ commit ไฟล์ที่ไม่เกี่ยวข้อง (`.DS_Store`, `*.log`, `node_modules/`)
 
@@ -93,9 +99,7 @@ Closes #29
 - กระทบกับ Data format ที่อิงรหัสอำเภอและตำบล
 ```
 
-ตัวอย่าง: 
-- [PR #34](https://github.com/kongvut/thai-province-data/pull/34)
-- [PR #36](https://github.com/kongvut/thai-province-data/pull/36)
+ตัวอย่าง: [PR #34](https://github.com/kongvut/thai-province-data/pull/34)
 
 ---
 

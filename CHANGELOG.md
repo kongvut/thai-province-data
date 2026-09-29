@@ -1,5 +1,43 @@
 # Changelog
 
+## [3.0.0] - 2026-09-29
+
+### Changed (⚠️ breaking)
+- **Schema แยก `name` ออกจาก `prefix`** เป็น nested object — `{name: {th, en}, prefix: {th, en}}`
+  - สมัยก่อน prefix บางแถว "ติดมาในชื่อ" (`name_th: "เขตพระนคร"`) บางแถวไม่มี (`name_th: "เมืองสมุทรปราการ"`) → ไม่สม่ำเสมอ
+  - v3 ทุกแถวมี `prefix` ชัดเจน, `name` เป็น base name เท่านั้น
+- **Province** ไม่มี prefix → `prefix: null` (คง key shape ให้สม่ำเสมอ)
+- **Geography** ไม่เปลี่ยน (single `name` field, ไม่มี locale split)
+- CSV/SQL/XLSX export **flatten** กลับเป็น 4 columns: `name_th`, `name_en`, `prefix_th`, `prefix_en` — SQL users ไม่ต้อง query JSON object
+- JSON/XML/API export เก็บ nested ตาม source
+
+### Added
+- `scripts/migrate_v2_to_v3.py` — one-shot transform (idempotent guard)
+- `api/v2/` — snapshot ของ v2 shape สำหรับ legacy consumers
+- `formats-v2/` — snapshot ของ v2 formats (csv/json/sql/xlsx/xml)
+- Validator (`0_validate_data.py`) รองรับ nested object schema โดย recurse เข้า `properties` ของ sub-object
+- `1_export_file_format.py` เพิ่ม `flatten_row()` สำหรับ tabular exports; `dict_to_xml` recurse ได้แล้ว
+- `prefix_th`/`prefix_en` VARCHAR(30) ใน SQL DDL (`districts`/`sub_districts` = NOT NULL, `provinces` = NULL allowed)
+
+### Removed
+- Dead code `load_spec_columns()` ใน `1_export_file_format.py` (return `[]` เสมอ, ไม่เคยถูกเรียก)
+- Dead imports `sys`, `re`, `Optional`, `datetime` ใน `1_export_file_format.py`
+- Dead `SPEC_FILES`/`SPEC_DIR` constants ใน `1_export_file_format.py` (ผู้ใช้เดียวคือ function ที่ลบ)
+- Redundant `soft_name_trim_check` ใน `0_validate_data.py` — ซ้ำกับ trim check ใน `validate_against_schema` อยู่แล้ว
+
+### Migration
+- ถ้าใช้ `api/latest/` → data shape เปลี่ยนทันทีเมื่อ pull master
+- ถ้าต้องการ v2 shape คงเดิม: switch URL ไป `api/v2/` (frozen)
+- display helper:
+  ```js
+  const display = row.prefix ? `${row.prefix.th}${row.name.th}` : row.name.th;
+  ```
+  ```python
+  display = f"{row['prefix']['th']}{row['name']['th']}" if row['prefix'] else row['name']['th']
+  ```
+
+---
+
 ## [2.0.0] - 2025-09-20
 
 ### Added
