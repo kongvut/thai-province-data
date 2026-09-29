@@ -6,7 +6,7 @@ ERD high-level — field details in `data/spec/*.json` (source of truth) แล�
 erDiagram
     GEOGRAPHIES {
         int id PK
-        string name
+        object name "th, en"
     }
     PROVINCES {
         int id PK
@@ -44,4 +44,4 @@ erDiagram
     DISTRICTS     ||--o{ SUB_DISTRICTS : "1..*"
 ```
 
-**หมายเหตุ**: `name` และ `prefix` เป็น nested object `{th, en}` (v3). CSV/SQL/XLSX exports flatten เป็น `<field>_th` / `<field>_en` columns.
+**หมายเหตุ**: `name` (ทุก entity) และ `prefix` (province/district/sub_district) เป็น nested object `{th, en}` — geography ได้ `name` nested ใน v3.1 แต่ไม่มี `prefix` field. CSV/SQL/XLSX exports flatten เป็น `<field>_th` / `<field>_en` columns.

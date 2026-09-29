@@ -42,7 +42,7 @@ RAW_FILES = {
 # (kept in sync with data/spec/*.json — see v3 schema)
 # ---------------------------
 COLUMN_ORDER = {
-    "geographies": ["id", "name"],
+    "geographies": ["id", "name_th", "name_en"],
     "provinces": ["id", "name_th", "name_en", "prefix_th", "prefix_en", "geography_id", "created_at", "updated_at", "deleted_at"],
     "districts": ["id", "name_th", "name_en", "prefix_th", "prefix_en", "province_id", "created_at", "updated_at", "deleted_at"],
     "sub_districts": ["id", "zip_code", "name_th", "name_en", "prefix_th", "prefix_en", "district_id", "lat", "long", "created_at", "updated_at", "deleted_at"],
@@ -54,7 +54,8 @@ COLUMN_ORDER = {
 DDL = {
     "geographies": """CREATE TABLE `geographies` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name_th` varchar(255) NOT NULL,
+  `name_en` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;""",
     "provinces": """CREATE TABLE `provinces` (

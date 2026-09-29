@@ -5,7 +5,15 @@
   "type": "object",
   "properties": {
     "id": { "type": "integer", "description": "รหัสภูมิภาค (Primary Key)" },
-    "name": { "type": "string", "maxLength": 255, "description": "ชื่อภูมิภาค" }
+    "name": {
+      "type": "object",
+      "description": "ชื่อภูมิภาค",
+      "properties": {
+        "th": { "type": "string", "maxLength": 255 },
+        "en": { "type": "string", "maxLength": 255 }
+      },
+      "required": ["th", "en"]
+    }
   },
   "required": ["id", "name"]
 }
