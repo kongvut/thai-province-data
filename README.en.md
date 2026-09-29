@@ -4,16 +4,16 @@
 [![GitHub forks](https://img.shields.io/github/forks/kongvut/thai-province-data.svg)](https://github.com/kongvut/thai-province-data/network)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-ชุดข้อมูล **จังหวัด / อำเภอ / ตำบล** ของประเทศไทย พร้อมใช้หลายรูปแบบ (CSV, JSON, SQL, XLSX, XML) และ API JSON ผ่าน GitHub raw URL
+A dataset of **provinces / districts / sub-districts** of Thailand, distributed in CSV, JSON, SQL, XLSX, XML, plus JSON API files served straight from GitHub raw URLs.
 
-ไทย | [English](README.en.md)
+[ไทย](README.md) | English
 
-> **v3** — schema แยก `name` ออกจาก `prefix` เป็น nested object (breaking change)
-> รายละเอียด + migration ที่ [CHANGELOG.md](CHANGELOG.md) · shape เก่าคงอยู่ที่ [api/v2/](api/v2/) และ [formats-v2/](formats-v2/)
+> **v3** — schema separates `name` from `prefix` as nested objects (breaking change).
+> Migration notes in [CHANGELOG.md](CHANGELOG.md) · v2 shape preserved at [api/v2/](api/v2/) and [formats-v2/](formats-v2/)
 
 ---
 
-## โครงสร้าง
+## Layout
 
 ```
 api/latest/                → v3 nested JSON (primary)
@@ -29,7 +29,7 @@ scripts/                   → pipeline (validate, export, make)
 
 ## Schema
 
-Source-of-truth = `data/spec/*.json` (validator และ pipeline อ่านจากไฟล์นี้ตรง ๆ)
+Source of truth = `data/spec/*.json` (validator and pipeline read these directly).
 
 | entity | fields |
 |---|---|
@@ -38,7 +38,7 @@ Source-of-truth = `data/spec/*.json` (validator และ pipeline อ่าน�
 | `district` | `id`, `name{th,en}`, `prefix{th,en}`, `province_id`, timestamps |
 | `sub_district` | `id`, `zip_code`, `name{th,en}`, `prefix{th,en}`, `district_id`, `lat`, `long`, timestamps |
 
-ตัวอย่าง district:
+Example district:
 
 ```json
 {
@@ -49,11 +49,11 @@ Source-of-truth = `data/spec/*.json` (validator และ pipeline อ่าน�
 }
 ```
 
-**Display**: `prefix.th + name.th` → `"เขตพระนคร"` (province → `prefix === null` → ใช้ `name.th` เฉย)
+**Display**: `prefix.th + name.th` → `"เขตพระนคร"`. For provinces, `prefix === null` so use `name.th` alone.
 
-**Tabular exports** (CSV/SQL/XLSX) flatten เป็น `<field>_th` / `<field>_en` columns; JSON/XML เก็บ nested
+**Tabular exports** (CSV/SQL/XLSX) flatten to `<field>_th` / `<field>_en` columns; JSON/XML keep nested.
 
-รายละเอียด + ERD → [docs/schema.md](docs/schema.md), [docs/diagram.md](docs/diagram.md)
+Full schema + ERD: [docs/schema.md](docs/schema.md), [docs/diagram.md](docs/diagram.md)
 
 ---
 
@@ -71,11 +71,11 @@ Source-of-truth = `data/spec/*.json` (validator และ pipeline อ่าน�
 curl -s https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json | jq '.[0:3]'
 ```
 
-React dropdown demo (cascade อำเภอ/ตำบล): <https://codesandbox.io/p/sandbox/thailand-province-demo-api-k3st7>
+React dropdown demo (cascading district/sub-district): <https://codesandbox.io/p/sandbox/thailand-province-demo-api-k3st7>
 
 ---
 
-## ใช้งานด้วยโค้ด
+## Use in code
 
 **Python**
 ```python
@@ -105,9 +105,9 @@ const displayTh = `${d.prefix.th}${d.name.th}`;   // "เขตพระนค�
 python3 scripts/make.py        # validate → export formats → export api
 ```
 
-หรือทีละ step — ดูรายละเอียด script ที่ [scripts/readme.md](scripts/readme.md)
+Or each step individually — see [scripts/readme.md](scripts/readme.md) for details.
 
-**Docker** (ไม่ต้องติดตั้ง Python/pandas/openpyxl เอง):
+**Docker** (no need to install Python/pandas/openpyxl locally):
 
 ```bash
 docker compose build
@@ -116,15 +116,15 @@ docker compose run --rm make
 
 ---
 
-## พัฒนาต่อ
+## Contributing
 
-- อ่าน [CONTRIBUTING.md](CONTRIBUTING.md) ก่อนเปิด PR
-- **ห้ามแก้** ไฟล์ใน `api/v1/`, `api/v2/`, `formats-v2/` (frozen legacy snapshots)
-- district/sub_district row ใหม่ต้องใส่ `prefix` ให้ถูกประเภท (เขต/แขวง สำหรับ กทม.; อำเภอ/ตำบล สำหรับต่างจังหวัด) — ดู rule ใน CONTRIBUTING.md
+- Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR
+- **Do not modify** files under `api/v1/`, `api/v2/`, `formats-v2/` — they are frozen legacy snapshots
+- New district / sub_district rows must set `prefix` correctly: Bangkok → `เขต`/`แขวง` (`Khet`/`Khwaeng`); other provinces → `อำเภอ`/`ตำบล` (`Amphoe`/`Tambon`). See the rules table in CONTRIBUTING.md
 
 ## History
 
-Breaking changes + migration notes → [CHANGELOG.md](CHANGELOG.md)
+Breaking changes and migration notes → [CHANGELOG.md](CHANGELOG.md)
 
 ## License
 
