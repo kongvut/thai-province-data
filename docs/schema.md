@@ -1,4 +1,8 @@
-# Schema
+# Schema (v3)
+
+> Breaking change จาก v2: `name_th`/`name_en` (flat, มี prefix ในชื่อไม่สม่ำเสมอ) →
+> `name: {th, en}` + `prefix: {th, en}` (nested, สม่ำเสมอ)
+> Province ไม่มี prefix → `prefix: null` เพื่อคง key shape ให้ทุก entity
 
 ## Geography
 
@@ -15,6 +19,8 @@
 }
 ```
 
+(geography ไม่มี locale split → schema ไม่เปลี่ยนใน v3)
+
 ## Province
 
 ```json
@@ -24,14 +30,14 @@
   "type": "object",
   "properties": {
     "id": { "type": "integer" },
-    "name_th": { "type": "string", "maxLength": 150 },
-    "name_en": { "type": "string", "maxLength": 150 },
+    "name":   { "type": "object", "properties": { "th": {"type":"string","maxLength":150}, "en": {"type":"string","maxLength":150} }, "required": ["th","en"] },
+    "prefix": { "type": ["object","null"], "properties": { "th": {"type":"string","maxLength":30}, "en": {"type":"string","maxLength":30} } },
     "geography_id": { "type": "integer" },
     "created_at": { "type": ["string","null"], "format": "date-time" },
     "updated_at": { "type": ["string","null"], "format": "date-time" },
     "deleted_at": { "type": ["string","null"], "format": "date-time" }
   },
-  "required": ["id", "name_th", "name_en", "geography_id"]
+  "required": ["id", "name", "prefix", "geography_id"]
 }
 ```
 
@@ -44,16 +50,19 @@
   "type": "object",
   "properties": {
     "id": { "type": "integer" },
-    "name_th": { "type": "string", "maxLength": 150 },
-    "name_en": { "type": "string", "maxLength": 150 },
+    "name":   { "type": "object", "properties": { "th": {"type":"string","maxLength":150}, "en": {"type":"string","maxLength":150} }, "required": ["th","en"] },
+    "prefix": { "type": "object", "properties": { "th": {"type":"string","maxLength":30}, "en": {"type":"string","maxLength":30} }, "required": ["th","en"] },
     "province_id": { "type": "integer" },
     "created_at": { "type": ["string","null"], "format": "date-time" },
     "updated_at": { "type": ["string","null"], "format": "date-time" },
     "deleted_at": { "type": ["string","null"], "format": "date-time" }
   },
-  "required": ["id", "name_th", "name_en", "province_id"]
+  "required": ["id", "name", "prefix", "province_id"]
 }
 ```
+
+`prefix.th` = `"เขต"` สำหรับ กทม. districts, `"อำเภอ"` สำหรับต่างจังหวัด (รวม "เมืองX" capital districts)
+`prefix.en` = `"Khet"` / `"Amphoe"`
 
 ## SubDistrict
 
@@ -65,8 +74,8 @@
   "properties": {
     "id": { "type": "integer" },
     "zip_code": { "type": "integer" },
-    "name_th": { "type": "string", "maxLength": 150 },
-    "name_en": { "type": "string", "maxLength": 150 },
+    "name":   { "type": "object", "properties": { "th": {"type":"string","maxLength":150}, "en": {"type":"string","maxLength":150} }, "required": ["th","en"] },
+    "prefix": { "type": "object", "properties": { "th": {"type":"string","maxLength":30}, "en": {"type":"string","maxLength":30} }, "required": ["th","en"] },
     "district_id": { "type": "integer" },
     "lat": { "type": ["number","null"] },
     "long": { "type": ["number","null"] },
@@ -74,9 +83,30 @@
     "updated_at": { "type": ["string","null"], "format": "date-time" },
     "deleted_at": { "type": ["string","null"], "format": "date-time" }
   },
-  "required": ["id", "zip_code", "name_th", "name_en", "district_id"]
+  "required": ["id", "zip_code", "name", "prefix", "district_id"]
 }
 ```
+
+`prefix.th` = `"แขวง"` สำหรับ sub_districts ใน กทม., `"ตำบล"` สำหรับต่างจังหวัด
+`prefix.en` = `"Khwaeng"` / `"Tambon"`
+
+## การ render สำหรับ display
+
+```python
+# Python
+display_name = f"{row['prefix']['th']}{row['name']['th']}" if row['prefix'] else row['name']['th']
+# → "เขตพระนคร", "อำเภอเมืองสมุทรปราการ", "กรุงเทพมหานคร"
+```
+
+```js
+// JS
+const display = row.prefix ? `${row.prefix.th}${row.name.th}` : row.name.th;
+```
+
+## Export formats: nested → flattened columns
+
+JSON / XML / API: เก็บ nested ตาม source
+CSV / SQL / XLSX: flatten `name` → `name_th`, `name_en`; `prefix` → `prefix_th`, `prefix_en` (null สำหรับ province)
 
 ## Province With District And SubDistrict
 

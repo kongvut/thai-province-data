@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # scripts/0_validate_data.py
-# Validate thai-province-data v2 using JSON specs in data/spec and inputs from data/raw
+# Validate thai-province-data v3 using JSON specs in data/spec and inputs from data/raw
 
 import argparse
 import json
@@ -176,6 +176,12 @@ def validate_against_schema(obj: Dict[str, Any], schema: Dict[str, Any], issues:
                 if fmt == "date-time":
                     if not parse_iso8601(val):
                         issues.err(f"{ctx}: key '{key}' not valid ISO8601 date-time")
+        elif "object" in types:
+            if not isinstance(val, dict):
+                issues.err(f"{ctx}: key '{key}' expected object, got {type(val).__name__}")
+            else:
+                # recurse into nested schema
+                validate_against_schema(val, prop, issues, f"{ctx}.{key}", strict)
         elif types and types != ["null"]:
             # some other type not implemented
             issues.warn(f"{ctx}: key '{key}' type '{types}' not fully validated by lightweight validator")
@@ -251,7 +257,7 @@ def validate_zip_lat_long(sub_rows: List[Dict[str, Any]], issues: Issues):
 # ---------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate v2 raw data using JSON specs")
+    parser = argparse.ArgumentParser(description="Validate v3 raw data using JSON specs")
     parser.add_argument("--root", default=None, help="Repo root (default: auto detect)")
     parser.add_argument("--fail-on-warn", action="store_true", help="Exit non-zero on warnings")
     parser.add_argument("--strict", action="store_true", help="Stricter schema checks (if applicable)")
@@ -344,16 +350,8 @@ def main():
     # Postal & lat/long
     validate_zip_lat_long(subs, issues)
 
-    # Soft name checks (trim spaces)
-    def soft_name_trim_check(label: str, rows: List[Dict[str, Any]], keys: List[str]):
-        for i, r in enumerate(rows, 1):
-            for k in keys:
-                if k in r and isinstance(r[k], str) and r[k] != r[k].strip():
-                    issues.warn(f"[{label}] row {i}: '{k}' has leading/trailing spaces")
-    soft_name_trim_check("provinces", provs, ["name_th", "name_en"])
-    soft_name_trim_check("districts", dists, ["name_th", "name_en"])
-    soft_name_trim_check("sub_districts", subs, ["name_th", "name_en"])
-    soft_name_trim_check("geographies", geogs, ["name"])
+    # Note: leading/trailing whitespace on string fields is already checked in
+    # validate_against_schema for every string property declared in data/spec/*.json.
 
     # Summary
     print("\n✅ Validation finished.")

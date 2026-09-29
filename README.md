@@ -4,199 +4,132 @@
 [![GitHub forks](https://img.shields.io/github/forks/kongvut/thai-province-data.svg)](https://github.com/kongvut/thai-province-data/network)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-ชุดข้อมูล **จังหวัด (Province), อำเภอ (District), ตำบล (Sub-district)** ของประเทศไทย  
-รองรับหลายรูปแบบ (**CSV, JSON, SQL, XLSX, XML**) และมี **API JSON** ให้เรียกใช้งานได้ทันที
+ชุดข้อมูล **จังหวัด / อำเภอ / ตำบล** ของประเทศไทย พร้อมใช้หลายรูปแบบ (CSV, JSON, SQL, XLSX, XML) และ API JSON ผ่าน GitHub raw URL
 
-> 📌 ตั้งแต่ **v2** มีการเปลี่ยนโครงสร้างและการตั้งชื่อ ดูรายละเอียดที่ [CHANGELOG.md](CHANGELOG.md)
+ไทย | [English](README.en.md)
 
----
-
-## 📚 Table of Contents
-- [โครงสร้างโปรเจกต์](#-โครงสร้างโปรเจกต์)
-- [รูปแบบข้อมูลและสคีมา](#-รูปแบบข้อมูลและสคีมา)
-- [ไฟล์ API พร้อมใช้งาน](#-ไฟล์-api-พร้อมใช้งาน)
-- [การใช้งานแบบรวดเร็ว](#-การใช้งานแบบรวดเร็ว)
-- [การใช้งานด้วยโค้ด](#-การใช้งานด้วยโค้ด)
-- [สคริปต์ & Automation](#-สคริปต์--automation)
-- [Diagram](#-diagram)
-- [Contributing](#-contributing)
-- [Documentation](#-documentation)
-- [Changelogs](#-changelogs)
-- [License](#-license)
+> **v3** — schema แยก `name` ออกจาก `prefix` เป็น nested object (breaking change)
+> รายละเอียด + migration ที่ [CHANGELOG.md](CHANGELOG.md) · shape เก่าคงอยู่ที่ [api/v2/](api/v2/) และ [formats-v2/](formats-v2/)
 
 ---
 
-## 📂 โครงสร้างโปรเจกต์
+## โครงสร้าง
 
 ```
-├── api
-│   ├── latest
-│   │   ├── district.json
-│   │   ├── province_with_district_and_sub_district.json
-│   │   ├── province.json
-│   │   ├── sub_district_with_district_and_province.json
-│   │   └── sub_district.json
-│   └── v1
-│       ├── amphure.json
-│       ├── province_with_amphure_tambon.json
-│       ├── province.json
-│       └── tambon.json
-├── data
-│   ├── raw/        # ข้อมูลต้นฉบับ
-│   └── spec/       # JSON Schema สำหรับ validate
-├── docs            # diagram, schema, readme
-├── formats         # export ไฟล์ csv/json/sql/xlsx/xml
-├── scripts         # pipeline สคริปต์ (validate, export, api)
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE
-└── README.md
+api/latest/                → v3 nested JSON (primary)
+api/v2/                    → frozen v2 snapshot (legacy)
+api/v1/                    → frozen v1 (amphure/tambon naming)
+data/raw/                  → JSON source of truth
+data/spec/                 → JSON Schema (validator + pipeline input)
+formats/                   → v3 export: csv/json/sql/xlsx/xml
+formats-v2/                → frozen v2 formats (legacy)
+docs/                      → schema.md, diagram.md
+scripts/                   → pipeline (validate, export, make)
 ```
 
-**Highlights v2**
-- `amphure` → `district`, `tambon` → `sub_district`
-- ลบ prefix `thai_` ในชื่อ dataset
-- เพิ่ม spec schema ใน `data/spec/*.json`
-- pipeline รันง่ายด้วย `scripts/make.py`
+## Schema
+
+Source-of-truth = `data/spec/*.json` (validator และ pipeline อ่านจากไฟล์นี้ตรง ๆ)
+
+| entity | fields |
+|---|---|
+| `geography` | `id`, `name` |
+| `province` | `id`, `name{th,en}`, `prefix` (null), `geography_id`, timestamps |
+| `district` | `id`, `name{th,en}`, `prefix{th,en}`, `province_id`, timestamps |
+| `sub_district` | `id`, `zip_code`, `name{th,en}`, `prefix{th,en}`, `district_id`, `lat`, `long`, timestamps |
+
+ตัวอย่าง district:
+
+```json
+{
+  "id": 1001,
+  "name":   { "th": "พระนคร", "en": "Phra Nakhon" },
+  "prefix": { "th": "เขต",    "en": "Khet" },
+  "province_id": 1
+}
+```
+
+**Display**: `prefix.th + name.th` → `"เขตพระนคร"` (province → `prefix === null` → ใช้ `name.th` เฉย)
+
+**Tabular exports** (CSV/SQL/XLSX) flatten เป็น `<field>_th` / `<field>_en` columns; JSON/XML เก็บ nested
+
+รายละเอียด + ERD → [docs/schema.md](docs/schema.md), [docs/diagram.md](docs/diagram.md)
 
 ---
 
-## 🧾 รูปแบบข้อมูลและสคีมา
-- **geography.json** → `id`, `name`
-- **province.json** → `id`, `name_th`, `name_en`, `geography_id`, timestamps
-- **district.json** → `id`, `name_th`, `name_en`, `province_id`, timestamps
-- **sub_district.json** → `id`, `zip_code`, `name_th`, `name_en`, `district_id`, `lat`, `long`, timestamps
+## API URLs (GitHub raw)
 
-ข้อมูลต้นทางอยู่ใน `data/raw/*.json` → export ได้หลายไฟล์ใน `formats/*`
-
----
-
-## 🔌 ไฟล์ API พร้อมใช้งาน
-
-API endpoints ใช้ไฟล์ใน [api/latest](https://github.com/kongvut/thai-province-data/tree/master/api/latest) สามารถเรียกใช้งานตรงจาก GitHub Raw:
-
-- `province.json`
-
-    ```
-    https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json
-    ```
-- `district.json`
-
-    ```
-    https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/district.json
-    ```
-- `sub_district.json`
-
-    ```
-    https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/sub_district.json
-    ```
-- `province_with_district_and_sub_district.json`
-
-    ```
-    https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province_with_district_and_sub_district.json
-    ```
-- `sub_district_with_district_and_province.json`
-
-    ```
-    https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/sub_district_with_district_and_province.json
-    ```
-
-**ตัวอย่าง Raw URL**
+| endpoint | URL |
+|---|---|
+| province | `https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json` |
+| district | `…/api/latest/district.json` |
+| sub_district | `…/api/latest/sub_district.json` |
+| province → districts → sub_districts | `…/api/latest/province_with_district_and_sub_district.json` |
+| sub_district → district → province | `…/api/latest/sub_district_with_district_and_province.json` |
 
 ```bash
-# ดูจังหวัดแรก ๆ
 curl -s https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json | jq '.[0:3]'
 ```
 
-## Fetch data demo by React
-
-ตัวอย่างการใช้งาน API `api/latest/province_with_district_and_sub_district.json` เพื่อสร้าง DropdownList
-
-> https://codesandbox.io/p/sandbox/thailand-province-demo-api-k3st7
-
-
-## 🗂 ประเภทไฟล์อื่น ๆ
-
-- [CSV](https://github.com/kongvut/thai-province-data/tree/master/formats/csv)
-- [JSON](https://github.com/kongvut/thai-province-data/tree/master/formats/json)
-- [SQL](https://github.com/kongvut/thai-province-data/tree/master/formats/sql)
-- [XLSX](https://github.com/kongvut/thai-province-data/tree/master/formats/xlsx)
-- [XML](https://github.com/kongvut/thai-province-data/tree/master/formats/xml)
+React dropdown demo (cascade อำเภอ/ตำบล): <https://codesandbox.io/p/sandbox/thailand-province-demo-api-k3st7>
 
 ---
 
-## 💻 การใช้งานด้วยโค้ด
+## ใช้งานด้วยโค้ด
 
-### Python
+**Python**
 ```python
 import requests
 
-url = "https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/province.json"
-provinces = requests.get(url).json()
+url = "https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/district.json"
+districts = requests.get(url).json()
 
-print(provinces[0])
-# {'id': 1, 'name_th': 'กรุงเทพมหานคร', 'name_en': 'Bangkok', 'geography_id': 2, ...}
+d = districts[0]
+display_th = f"{d['prefix']['th']}{d['name']['th']}"   # "เขตพระนคร"
 ```
 
-### Node.js
+**Node.js**
 ```js
-import fetch from "node-fetch";
-
 const url = "https://raw.githubusercontent.com/kongvut/thai-province-data/refs/heads/master/api/latest/district.json";
-const res = await fetch(url);
-const districts = await res.json();
+const districts = await (await fetch(url)).json();
 
-console.log(districts[0]);
-// { id: 1001, name_th: 'เขตพระนคร', name_en: 'Khet Phra Nakhon', province_id: 1, ... }
+const d = districts[0];
+const displayTh = `${d.prefix.th}${d.name.th}`;   // "เขตพระนคร"
 ```
 
 ---
 
-## 🧪 สคริปต์ & Automation
+## Pipeline
 
-- `scripts/0_validate_data.py` → validate schema + FK + format
-- `scripts/1_export_file_format.py --overwrite` → export CSV/JSON/SQL/XLSX/XML
-- `scripts/2_export_api.py --overwrite` → build API JSON
-- `scripts/make.py` → pipeline รวมทุกขั้นตอน
+**แนะนำ: Docker** (ไม่ต้อง setup Python/dependencies เอง; ตรงกับ CI):
 
-อ่านรายละเอียดเพิ่มเติม [scripts/readme.md](scripts/readme.md)
-
----
-
-## 🧭 Diagram
-
-ดูแผนภาพ ERD ที่ [docs/diagram.md](docs/diagram.md)
-ตัวอย่าง Mermaid:
-
-```mermaid
-erDiagram
-  GEOGRAPHIES ||--o{ PROVINCES : "1..*"
-  PROVINCES   ||--o{ DISTRICTS : "1..*"
-  DISTRICTS   ||--o{ SUB_DISTRICTS : "1..*"
+```bash
+docker compose build
+docker compose run --rm make
 ```
 
----
+**Local Python** (ถ้าไม่สะดวกใช้ Docker — ต้องมี `pandas` + `openpyxl`):
 
-## 🤝 Contributing
-- ยินดีรับ PR ทั้งแก้ไขข้อมูล เพิ่ม dataset ปรับ docs หรือเพิ่ม export format
-- โปรดอ่าน [CONTRIBUTING.md](CONTRIBUTING.md) ก่อนส่ง PR
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -U pandas openpyxl
+python3 scripts/make.py
+```
 
----
-
-## 📃 Documentation
-
-Documentation เอกสารประกอบสำหรับการใช้งานและการพัฒนาโปรเจกต์ `thai-province-data` [docs/readme.md](docs/readme.md)
+รายละเอียด script ทีละ step → [scripts/readme.md](scripts/readme.md)
 
 ---
 
-## 📜 Changelogs
+## พัฒนาต่อ
 
-โปรเจกต์นี้มีการอัปเดตและปรับปรุงอย่างต่อเนื่อง  
-สามารถติดตามรายละเอียดการเปลี่ยนแปลงทั้งหมดได้ที่ [CHANGELOG.md](CHANGELOG.md)
+- อ่าน [CONTRIBUTING.md](CONTRIBUTING.md) ก่อนเปิด PR
+- **ห้ามแก้** ไฟล์ใน `api/v1/`, `api/v2/`, `formats-v2/` (frozen legacy snapshots)
+- district/sub_district row ใหม่ต้องใส่ `prefix` ให้ถูกประเภท (เขต/แขวง สำหรับ กทม.; อำเภอ/ตำบล สำหรับต่างจังหวัด) — ดู rule ใน CONTRIBUTING.md
 
-For more details, please see the [CHANGELOG.md](https://github.com/kongvut/thai-province-data/blob/master/CHANGELOG.md)
+## History
 
----
+Breaking changes + migration notes → [CHANGELOG.md](CHANGELOG.md)
 
-## 📄 License
-[MIT License](LICENSE) © 2025 Kongvut Sangkla
+## License
+
+MIT © 2025 Kongvut Sangkla → [LICENSE](LICENSE)

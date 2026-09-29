@@ -6,13 +6,19 @@ on:
       - "data/raw/**"
       - "data/spec/**"
       - "scripts/0_validate_data.py"
+      - "scripts/1_export_file_format.py"
+      - "scripts/2_export_api.py"
+      - "scripts/make.py"
       - ".github/workflows/validate-raw.yml"
   push:
-    branches: ["main"]
+    branches: ["master"]
     paths:
       - "data/raw/**"
       - "data/spec/**"
       - "scripts/0_validate_data.py"
+      - "scripts/1_export_file_format.py"
+      - "scripts/2_export_api.py"
+      - "scripts/make.py"
 
 permissions:
   contents: read
@@ -32,6 +38,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install export deps (pandas + openpyxl for XLSX)
+        run: pip install -U pandas openpyxl
+
       - name: Run validator (capture output)
         id: validate
         shell: bash
@@ -46,12 +55,34 @@ jobs:
             exit 1
           fi
 
+      - name: Check text formats + api/latest are in sync with raw (no drift)
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 scripts/1_export_file_format.py --overwrite > regen_output.txt 2>&1 \
+            || { echo "❌ 1_export_file_format.py failed"; cat regen_output.txt; exit 1; }
+          python3 scripts/2_export_api.py --overwrite >> regen_output.txt 2>&1 \
+            || { echo "❌ 2_export_api.py failed"; cat regen_output.txt; exit 1; }
+
+          # Track untracked files so new exports appear in diff (not just modifications)
+          git add -N formats/csv formats/json formats/sql formats/xml api/latest/
+          if ! git diff --quiet formats/csv formats/json formats/sql formats/xml api/latest/; then
+            echo "::error::text exports or api/latest are stale — run 'python3 scripts/make.py' locally and commit"
+            git diff --stat formats/csv formats/json formats/sql formats/xml api/latest/
+            exit 1
+          fi
+          # formats/xlsx/ excluded from drift check: openpyxl embeds creation
+          # timestamp → bytes differ every regen even when content is identical.
+          echo "✅ text exports + api/latest match a fresh regen"
+
       - name: Upload validation output (artifact)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: validation-output
-          path: validation_output.txt
+          path: |
+            validation_output.txt
+            regen_output.txt
 
       - name: Comment on PR when failed
         if: failure() && github.event_name == 'pull_request'
@@ -60,6 +91,9 @@ jobs:
           script: |
             const fs = require('fs');
             let body = fs.readFileSync('validation_output.txt', 'utf8');
+            if (fs.existsSync('regen_output.txt')) {
+              body += "\n--- regen output ---\n" + fs.readFileSync('regen_output.txt', 'utf8');
+            }
 
             const MAX = 5000;
             let truncated = false;
@@ -70,9 +104,9 @@ jobs:
 
             const prNumber = context.payload.pull_request.number;
             const header = [
-              "? **Validation failed**",
+              "❌ **Validation failed**",
               "",
-              "**Summary**: The validator detected errors/warnings in the dataset.",
+              "**Summary**: Validator detected errors/warnings in the dataset, OR generated exports are out of sync with `data/raw/`.",
               "",
               "```text",
             ].join("\n");

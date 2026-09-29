@@ -1,168 +1,136 @@
 # Contributing Guide
 
-ขอบคุณที่สนใจร่วมพัฒนา **thai-province-data** 🎉  
-โปรเจกต์นี้เป็นฐานข้อมูล **จังหวัด, อำเภอ (district), ตำบล (sub_district)** ของประเทศไทย  
-สามารถใช้งานได้หลายรูปแบบ (CSV, JSON, SQL, XLSX, XML, API) และเปิดกว้างสำหรับการร่วมพัฒนา
+ขอบคุณที่สนใจร่วมพัฒนา **thai-province-data** — ชุดข้อมูลจังหวัด / อำเภอ / ตำบล ของประเทศไทย
+
+ไทย | [English](CONTRIBUTING.en.md)
+
+ข้อมูลใน repo นี้เป็น **open data** ที่รวมจากหลายแหล่ง (กรมการปกครอง, ไปรษณีย์ไทย) — ทุก PR ต้องมี **reference** ที่ชัดเจนเพื่อความถูกต้องระยะยาว
 
 ---
 
-## 🛠️ ขั้นตอนการมีส่วนร่วม
+## Workflow
 
-1. **Fork repository** ไปยัง GitHub ของคุณ
-2. **สร้าง branch ใหม่** สำหรับการแก้ไข/เพิ่มข้อมูล
+1. **Fork** repo ไปยังบัญชี GitHub ของคุณ
+2. **Branch ใหม่** จาก `master`:
    ```bash
-   git checkout -b fix-district-name
+   git checkout -b fix-bueng-kan-zip
    ```
-   ตัวอย่างชื่อ branch ที่แนะนำ:
-    - `fix-district-name`
-    - `update-postal-code`
-    - `add-new-district-data`
-3. ทำการแก้ไขหรือเพิ่มข้อมูลที่ไฟล์ (และอัปเดทเวลาเมื่อแก้ไขข้อมูล `updated_at`) `data/raw/*.json`
-
-   > note: รบกวนแก้ไขไฟล์ที่ `data/raw/*.json` เท่านั้น เพราะ API และ File format ต่าง ๆ จะถูก Generate อัตโนมัติในขั้นตอนที่ 4
-4. **ตรวจสอบข้อมูลก่อนส่ง PR**
+   ชื่อที่แนะนำ: `fix-<entity>-<short-issue>` หรือ `add-<new-entity>` (เช่น `add-district-kanlapaphruek`, `update-sub-district-spelling`)
+3. **แก้ที่ `data/raw/*.json` เท่านั้น** (พร้อมอัปเดต `updated_at` ของแถวที่แก้) — `formats/` และ `api/latest/` เป็น artifact regenerated อัตโนมัติ
+4. **Validate + regen** (ใช้ Docker — ไม่ต้อง setup):
    ```bash
-   python3 scripts/0_validate_data.py --strict --fail-on-warn
-   python3 scripts/make.py
+   docker compose build              # ครั้งแรกเท่านั้น
+   docker compose run --rm make      # validate + export ทุกครั้ง
    ```
-   > สำหรับผู้ที่ไม่ต้องการติดตั้ง Python และ dependency เอง สามารถใช้ Docker ได้ทันทีที่นี่ "[การใช้งานด้วย Docker](#1-build-image)"
-5. Commit การเปลี่ยนแปลงด้วยข้อความสั้น กระชับ:
-   ```bash
-   fix: correct zip code in sub_districts
-   add: new district in Chiang Mai
-   docs: update README for API usage
-   ```
-6. เปิด **Pull Request (PR)** มายัง branch `main` พร้อมคำอธิบายที่ชัดเจน
+   (ถ้าไม่สะดวกใช้ Docker → ดู [Pipeline (Python local)](#pipeline-python-local))
+5. **Commit** — ใช้ conventional commit สั้น ๆ เช่น:
+   - `fix(data): correct zip code for sub_district 102601`
+   - `add(data): new district กัลยาณิวัฒนา in Chiang Mai`
+   - `docs: update API URL list in README`
+6. **เปิด PR** มายัง branch `master` — ใส่รายละเอียดตาม template ด้านล่าง
 
 ---
 
-## 📂 โครงสร้างข้อมูล
+## Data rules (v3 schema)
 
-- `data/raw/` → ไฟล์ต้นทาง (JSON array)
-- `data/spec/` → JSON Schema ของแต่ละตาราง
-- `formats/` → ไฟล์ export หลายรูปแบบ (csv/json/sql/xlsx/xml)
-- `api/latest/` → API JSON ที่ build แล้วจาก raw data
+Source of truth: [`data/spec/*.json`](data/spec/) — schema เปลี่ยนคือ breaking change ต้อง Discuss ผ่าน issue ก่อน
 
----
+| Entity | field | ต้องมี? | ตัวอย่าง |
+|---|---|---|---|
+| district | `name.th` / `name.en` | ✅ base name เท่านั้น | `"พระนคร"` / `"Phra Nakhon"` |
+| district | `prefix.th` / `prefix.en` | ✅ **ห้าม null** | กทม. = `"เขต"`/`"Khet"`, ต่างจังหวัด = `"อำเภอ"`/`"Amphoe"` |
+| sub_district | `prefix.th` / `prefix.en` | ✅ **ห้าม null** | กทม. = `"แขวง"`/`"Khwaeng"`, ต่างจังหวัด = `"ตำบล"`/`"Tambon"` |
+| province | `prefix` | ต้องมี key = `null` | (จังหวัดไม่มี convention prefix) |
+| ทุก entity | `id` | primary key, ห้ามซ้ำ, ห้ามเปลี่ยนค่า id เก่า | |
 
-## ✅ สิ่งที่ทำได้
+**ข้อห้ามสำคัญ:**
+- ❌ `name.th` ต้อง **ไม่มี** prefix ติดมา — `"เขตพระนคร"` ผิด → แยกเป็น `name.th: "พระนคร"`, `prefix.th: "เขต"`
+- ❌ `name_th`/`name_en`/`prefix_th`/`prefix_en` (flat columns) — v2 schema, ห้ามใส่กลับ
+- ❌ แก้ชื่อคอลัมน์/keys ใน `data/spec/*.json` โดยไม่มี issue อภิปราย
+- ❌ แก้ `api/v1/`, `api/v2/`, `formats-v2/` (frozen legacy snapshots)
+- ❌ `district_id` ของ sub_district ใหม่ต้อง FK valid → validate script จะตรวจ
 
-- แก้ไขข้อมูลสะกดผิด (`name_th`, `name_en`)
-- ปรับปรุง **รหัสไปรษณีย์ / lat / long**
-- เพิ่มข้อมูลใหม่จาก **หน่วยงานรัฐ/แหล่งทางการ**
-- ปรับปรุง **เอกสาร** (README, Docs, Schema)
-- เพิ่มรูปแบบ export ใหม่ (เช่น **Parquet, GeoJSON**)
-- ปรับปรุงสคริปต์ใน `scripts/` ให้ใช้งานง่ายขึ้น
-
----
-
-## 🔒 สิ่งที่ควรระวัง
-
-- ต้องคง **schema** ตามที่กำหนดใน `data/spec/`
-- ห้ามเปลี่ยนชื่อคอลัมน์/keys โดยพลการ
-- ข้อมูลใหม่ควรมี **reference ที่ชัดเจน**
-- หลีกเลี่ยงการ commit ไฟล์ที่ไม่เกี่ยวข้อง (`.DS_Store`, `*.log`, `node_modules/`)
+**Edge case — เมือง capitals:**
+`name.th = "เมืองสมุทรปราการ"` (district id 1101) เป็นชื่อเต็มของอำเภอเมืองจังหวัด — "เมือง" เป็นส่วนหนึ่งของ **name** ไม่ใช่ prefix ที่ต้อง strip → `prefix.th = "อำเภอ"`, `name.th = "เมืองสมุทรปราการ"`
 
 ---
 
-## 📄 ตัวอย่าง Pull Request
-
-เวลาเปิด PR กรุณาระบุรายละเอียด เช่น:
+## PR body template
 
 ```markdown
-## Pull Request: เพิ่มอำเภอใหม่ "กัลยาณิวัฒนา"  
-Closes #29
+## Pull Request: <สรุป 1 บรรทัด>
+Closes #<issue>
 
 ### Summary
-เพิ่มอำเภอใหม่ **กัลยาณิวัฒนา** พร้อมอัปเดตข้อมูลตำบลที่ถูกย้ายจากอำเภอแม่แจ่มไปยังอำเภอใหม่
-
-**ตำบลที่ถูกย้าย**
-- บ้านจันทร์: จาก แม่แจ่ม (500306) → กัลยาณิวัฒนา (502501)  
-- แม่แดด: จาก แม่แจ่ม (500309) → กัลยาณิวัฒนา (502502)  
-- แจ่มหลวง: จาก แม่แจ่ม (500310) → กัลยาณิวัฒนา (502503)
+<อธิบาย: เปลี่ยนอะไร ทำไม>
 
 ### Changes
-- `data/raw/districts.json`
-- `data/raw/sub_districts.json`
+- `data/raw/districts.json` — เพิ่มอำเภอ กัลยาณิวัฒนา (id 5025)
+- `data/raw/sub_districts.json` — ย้าย 3 ตำบลจาก อำเภอแม่แจ่ม → กัลยาณิวัฒนา
 
 ### Reference
-- https://th.wikipedia.org/wiki/อำเภอกัลยาณิวัฒนา
+- <URL ทางการ — กรมการปกครอง / ราชกิจจานุเบกษา / วิกิพีไทย (มี citation)>
 
 ### Impact
-- มีผลกระทบต่อ API JSON
-- กระทบกับ Data format ที่อิงรหัสอำเภอและตำบล
+- [ ] API endpoint (`api/latest/`) affected (regen ด้วย make.py แล้ว)
+- [ ] Format exports affected (regen แล้ว)
+- [ ] Breaking schema change (ต้อง discuss ใน issue ก่อน)
 ```
 
-ตัวอย่าง: 
-- [PR #34](https://github.com/kongvut/thai-province-data/pull/34)
-- [PR #36](https://github.com/kongvut/thai-province-data/pull/36)
+**ตัวอย่างจริง:** [PR #34](https://github.com/kongvut/thai-province-data/pull/34) — add new district, [PR #46](https://github.com/kongvut/thai-province-data/pull/46) — bulk restore from DOPA + Bueng Kan renumbering
 
 ---
 
-## 🧑‍💻 สำหรับนักพัฒนา
+## Review criteria
 
-### ติดตั้ง environment
+Maintainer ตรวจ PR ทุกตัวตามนี้:
+
+- ✅ **validate ผ่าน**: `python3 scripts/0_validate_data.py --strict --fail-on-warn`
+- ✅ **regen ผ่าน**: `python3 scripts/make.py` → formats + api/latest ต้อง match commit
+- ✅ **reference ชัด**: ทุกข้อมูลใหม่/แก้ต้องมีแหล่งอ้างอิง
+- ✅ **prefix ถูกประเภท**: ตรวจด้วยตา 1 ครั้ง — กทม. vs ต่างจังหวัดสลับกันบ่อย
+- ✅ **CI workflow** (validate-raw.yml) = green
+
+PR ที่มี schema change (field add/rename) ต้อง discuss เป็น issue ก่อน แล้วค่อยส่ง PR
+
+---
+
+## Pipeline (Docker — recommended)
+
+ไม่ต้องติดตั้ง Python/pandas/openpyxl เอง; environment ตรงกับ CI
+
+```bash
+docker compose build                    # ครั้งแรกเท่านั้น (สร้าง image)
+docker compose run --rm validate        # validate อย่างเดียว (strict + fail-on-warn)
+docker compose run --rm make            # validate → export formats → export api
+```
+
+repo ถูก volume-mount ที่ `./:/app:rw` — แก้ไข `data/raw/*.json` บน host ได้เลย, container เห็นผลทันที และ regen outputs (`formats/`, `api/latest/`) เขียนกลับเข้า host directory เดิม
+
+**Fallback — Python local** (Docker ไม่ได้ / ทำงาน offline):
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -U pandas openpyxl
 ```
 
-### รันสคริปต์แยก
-- ตรวจสอบข้อมูล: `python3 scripts/0_validate_data.py --strict --fail-on-warn`
-- export formats: `python3 scripts/1_export_file_format.py --overwrite`
-- export api: `python3 scripts/2_export_api.py --overwrite`
-
----
-
-## 🧰 Automation Pipeline
-
-สามารถรัน pipeline ได้ด้วยคำสั่งเดียว:
+รันทั้ง pipeline:
 
 ```bash
 python3 scripts/make.py
 ```
 
-Pipeline จะทำงานดังนี้:
-1. รัน `0_validate_data.py` ตรวจสอบข้อมูล
-2. รัน `1_export_file_format.py --overwrite` สร้าง formats
-3. รัน `2_export_api.py --overwrite` อัปเดต API JSON
+หรือทีละ step:
 
----
-
-## 🐳 การใช้งานด้วย Docker
-
-สำหรับผู้ที่ไม่ต้องการติดตั้ง Python และ dependency เอง สามารถใช้ Docker ได้ทันที
-
-### 1) Build image
 ```bash
-docker compose build
+python3 scripts/0_validate_data.py --strict --fail-on-warn     # schema + FK + invariants
+python3 scripts/1_export_file_format.py --overwrite            # CSV/SQL/XLSX/JSON/XML
+python3 scripts/2_export_api.py --overwrite                    # api/latest/*.json
 ```
 
-### 2) รัน validator
-```bash
-docker compose run --rm validate
-```
+ถ้า validate fail → make.py หยุดทันที exit code 1 (CI fail แบบเดียวกัน)
 
-### 3) รัน pipeline เต็ม (validate → export formats → export api)
-```bash
-docker compose run --rm make
-```
+## License
 
-### 4) อธิบายโครงสร้างไฟล์ที่ใช้ร่วมกับ Docker
-- [Dockerfile](/Dockerfile) — กำหนด environment และ dependency
-- [docker-compose.yml](/docker-compose.yml) — service สำหรับ `validate` และ `make`
-- mount โฟลเดอร์ปัจจุบัน (`./`) ไปยัง `/app` ใน container เพื่อให้แก้ไขข้อมูลใน repo แล้วสามารถรันได้ทันที
-
-> เหมาะสำหรับผู้ใช้ที่ต้องการความสะดวก ไม่ต้องติดตั้ง Python, pandas, openpyxl ในเครื่อง
-
-## 🤝 การ Review & Merge
-
-- Maintainer จะตรวจสอบ PR ทุกครั้ง
-- ถ้าข้อมูลถูกต้องและมี reference → PR จะถูก merge
-- ถ้ามีปัญหา จะมีการ comment ให้แก้ไขก่อน
-
----
-
-🙏 ขอบคุณสำหรับการมีส่วนร่วม  
-สิ่งที่คุณช่วยปรับปรุง จะช่วยให้ dataset นี้ **แม่นยำ ครอบคลุม และมีประโยชน์ต่อผู้ใช้งานทุกคน**
+ทุก contribution ที่ merge เข้า repo นี้ถือเป็น MIT License (ดู [LICENSE](LICENSE))
