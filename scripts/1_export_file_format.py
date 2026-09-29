@@ -6,10 +6,7 @@ import argparse
 import csv
 import json
 import os
-import sys
-import re
-from typing import Any, Dict, List, Optional
-from datetime import datetime
+from typing import Any, Dict, List
 from xml.etree.ElementTree import Element, SubElement, ElementTree
 
 # ---------------------------
@@ -25,7 +22,6 @@ except Exception:
 # Paths
 # ---------------------------
 RAW_DIR = "data/raw"
-SPEC_DIR = "data/spec"
 OUT_DIRS = {
     "csv": "formats/csv",
     "json": "formats/json",
@@ -41,22 +37,15 @@ RAW_FILES = {
     "sub_districts": os.path.join(RAW_DIR, "sub_districts.json"),
 }
 
-SPEC_FILES = {
-    "geography": os.path.join(SPEC_DIR, "geography.json"),
-    "province": os.path.join(SPEC_DIR, "province.json"),
-    "district": os.path.join(SPEC_DIR, "district.json"),
-    "sub_district": os.path.join(SPEC_DIR, "sub_district.json"),
-}
-
 # ---------------------------
 # Output file mapping and canonical column order
-# (order from SQL schema provided)
+# (kept in sync with data/spec/*.json — see v3 schema)
 # ---------------------------
 COLUMN_ORDER = {
     "geographies": ["id", "name"],
-    "provinces": ["id", "name_th", "name_en", "geography_id", "created_at", "updated_at", "deleted_at"],
-    "districts": ["id", "name_th", "name_en", "province_id", "created_at", "updated_at", "deleted_at"],
-    "sub_districts": ["id", "zip_code", "name_th", "name_en", "district_id", "lat", "long", "created_at", "updated_at", "deleted_at"],
+    "provinces": ["id", "name_th", "name_en", "prefix_th", "prefix_en", "geography_id", "created_at", "updated_at", "deleted_at"],
+    "districts": ["id", "name_th", "name_en", "prefix_th", "prefix_en", "province_id", "created_at", "updated_at", "deleted_at"],
+    "sub_districts": ["id", "zip_code", "name_th", "name_en", "prefix_th", "prefix_en", "district_id", "lat", "long", "created_at", "updated_at", "deleted_at"],
 }
 
 # ---------------------------
@@ -72,6 +61,8 @@ DDL = {
   `id` int(11) NOT NULL,
   `name_th` varchar(150) NOT NULL,
   `name_en` varchar(150) NOT NULL,
+  `prefix_th` varchar(30) DEFAULT NULL,
+  `prefix_en` varchar(30) DEFAULT NULL,
   `geography_id` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
@@ -82,6 +73,8 @@ DDL = {
   `id` int(11) NOT NULL,
   `name_th` varchar(150) NOT NULL,
   `name_en` varchar(150) NOT NULL,
+  `prefix_th` varchar(30) NOT NULL,
+  `prefix_en` varchar(30) NOT NULL,
   `province_id` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
@@ -93,6 +86,8 @@ DDL = {
   `zip_code` int(11) NOT NULL,
   `name_th` varchar(150) NOT NULL,
   `name_en` varchar(150) NOT NULL,
+  `prefix_th` varchar(30) NOT NULL,
+  `prefix_en` varchar(30) NOT NULL,
   `district_id` int(11) NOT NULL,
   `lat` double DEFAULT NULL,
   `long` double DEFAULT NULL,
@@ -141,6 +136,21 @@ def to_rows_in_order(rows: List[Dict[str, Any]], order: List[str]) -> List[List[
         out.append([r.get(col, None) for col in order])
     return out
 
+def flatten_row(r: Dict[str, Any]) -> Dict[str, Any]:
+    """v3 nested {name:{th,en}, prefix:{th,en}} → flat {name_th, name_en, prefix_th, prefix_en}
+    for tabular exports (CSV / SQL / XLSX). Pass through other keys as-is."""
+    out: Dict[str, Any] = {}
+    for k, v in r.items():
+        if k in ("name", "prefix") and isinstance(v, dict):
+            out[f"{k}_th"] = v.get("th")
+            out[f"{k}_en"] = v.get("en")
+        elif k in ("name", "prefix") and v is None:
+            out[f"{k}_th"] = None
+            out[f"{k}_en"] = None
+        else:
+            out[k] = v
+    return out
+
 def write_csv(path: str, headers: List[str], rows2d: List[List[Any]]):
     with open(path, "w", encoding="utf-8", newline="") as f:
         writer = csv.writer(f)
@@ -172,11 +182,15 @@ def write_xlsx(path: str, headers: List[str], rows2d: List[List[Any]]):
     df.to_excel(path, index=False)
 
 def dict_to_xml(tag: str, d: Dict[str, Any]) -> Element:
-    """Convert dict to XML element <tag> with simple child elements."""
+    """Convert dict to XML element <tag> with simple child elements (recursing into nested dicts)."""
     e = Element(tag)
     for k, v in d.items():
-        child = SubElement(e, k)
-        child.text = "" if v is None else str(v)
+        if isinstance(v, dict):
+            child = dict_to_xml(k, v)
+            e.append(child)
+        else:
+            child = SubElement(e, k)
+            child.text = "" if v is None else str(v)
     return e
 
 def write_xml(path: str, root_tag: str, item_tag: str, rows: List[Dict[str, Any]]):
@@ -186,18 +200,6 @@ def write_xml(path: str, root_tag: str, item_tag: str, rows: List[Dict[str, Any]
         root.append(node)
     tree = ElementTree(root)
     tree.write(path, encoding="utf-8", xml_declaration=True)
-
-def load_spec_columns(repo_root: str, spec_file: str) -> List[str]:
-    """Try to read properties order from spec. If not reliable, fall back to COLUMN_ORDER."""
-    path = os.path.join(repo_root, spec_file)
-    try:
-        spec = load_json(path)
-        props = spec.get("properties", {})
-        # JSON object has no guaranteed order, so we will
-        # use COLUMN_ORDER defined above for canonical order.
-        return []  # signal to use COLUMN_ORDER
-    except Exception:
-        return []
 
 # ---------------------------
 # Main export
@@ -214,9 +216,11 @@ def export_table(repo_root: str, table: str, raw_name: str, json_indent: int, ov
         print(f"⛔ {RAW_FILES[raw_name]} must be a JSON array")
         return
 
-    # column order
+    # column order (flat names, matches SQL/CSV/XLSX columns)
     order = COLUMN_ORDER[table]
-    rows2d = to_rows_in_order(rows, order)
+    # Tabular exports use flattened rows; JSON/XML keep nested source.
+    flat_rows = [flatten_row(r) for r in rows]
+    rows2d = to_rows_in_order(flat_rows, order)
 
     # ensure out dirs
     for ext, d in OUT_DIRS.items():
