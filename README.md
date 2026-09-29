@@ -9,6 +9,7 @@
 ไทย | [English](README.en.md)
 
 > **v3** — schema แยก `name` ออกจาก `prefix` เป็น nested object (breaking change)
+> **v3.1** — `geography.name` เป็น nested `{th, en}` เช่นกัน (ทุก entity nested สอดคล้องกันแล้ว)
 > รายละเอียด + migration ที่ [CHANGELOG.md](CHANGELOG.md) · shape เก่าคงอยู่ที่ [api/v2/](api/v2/) และ [formats-v2/](formats-v2/)
 
 ---
@@ -33,7 +34,7 @@ Source-of-truth = `data/spec/*.json` (validator และ pipeline อ่าน�
 
 | entity | fields |
 |---|---|
-| `geography` | `id`, `name` |
+| `geography` | `id`, `name{th,en}` (ไม่มี `prefix`) |
 | `province` | `id`, `name{th,en}`, `prefix` (null), `geography_id`, timestamps |
 | `district` | `id`, `name{th,en}`, `prefix{th,en}`, `province_id`, timestamps |
 | `sub_district` | `id`, `zip_code`, `name{th,en}`, `prefix{th,en}`, `district_id`, `lat`, `long`, timestamps |

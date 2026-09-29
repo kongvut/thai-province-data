@@ -1,8 +1,9 @@
-# Schema (v3)
+# Schema (v3.1)
 
 > Breaking change จาก v2: `name_th`/`name_en` (flat, มี prefix ในชื่อไม่สม่ำเสมอ) →
 > `name: {th, en}` + `prefix: {th, en}` (nested, สม่ำเสมอ)
 > Province ไม่มี prefix → `prefix: null` เพื่อคง key shape ให้ทุก entity
+> v3.1: `geography.name` จาก string → nested `{th, en}` (geography ไม่มี prefix concept)
 
 ## Geography
 
@@ -13,13 +14,20 @@
   "type": "object",
   "properties": {
     "id": { "type": "integer", "description": "Primary key" },
-    "name": { "type": "string", "maxLength": 255 }
+    "name": {
+      "type": "object",
+      "properties": {
+        "th": { "type": "string", "maxLength": 255 },
+        "en": { "type": "string", "maxLength": 255 }
+      },
+      "required": ["th", "en"]
+    }
   },
   "required": ["id", "name"]
 }
 ```
 
-(geography ไม่มี locale split → schema ไม่เปลี่ยนใน v3)
+(geography ไม่มี prefix → ไม่มีคีย์ `prefix`; ต่างจาก province ที่ `prefix: null`)
 
 ## Province
 

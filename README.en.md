@@ -9,6 +9,7 @@ A dataset of **provinces / districts / sub-districts** of Thailand, distributed 
 [ไทย](README.md) | English
 
 > **v3** — schema separates `name` from `prefix` as nested objects (breaking change).
+> **v3.1** — `geography.name` is now nested `{th, en}` too (every entity is consistently nested).
 > Migration notes in [CHANGELOG.md](CHANGELOG.md) · v2 shape preserved at [api/v2/](api/v2/) and [formats-v2/](formats-v2/)
 
 ---
@@ -33,7 +34,7 @@ Source of truth = `data/spec/*.json` (validator and pipeline read these directly
 
 | entity | fields |
 |---|---|
-| `geography` | `id`, `name` |
+| `geography` | `id`, `name{th,en}` (no `prefix`) |
 | `province` | `id`, `name{th,en}`, `prefix` (null), `geography_id`, timestamps |
 | `district` | `id`, `name{th,en}`, `prefix{th,en}`, `province_id`, timestamps |
 | `sub_district` | `id`, `zip_code`, `name{th,en}`, `prefix{th,en}`, `district_id`, `lat`, `long`, timestamps |
