@@ -118,9 +118,9 @@ docker compose run --rm make
 
 ## Contributing
 
-- Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR
+- Read [CONTRIBUTING.en.md](CONTRIBUTING.en.md) before opening a PR
 - **Do not modify** files under `api/v1/`, `api/v2/`, `formats-v2/` — they are frozen legacy snapshots
-- New district / sub_district rows must set `prefix` correctly: Bangkok → `เขต`/`แขวง` (`Khet`/`Khwaeng`); other provinces → `อำเภอ`/`ตำบล` (`Amphoe`/`Tambon`). See the rules table in CONTRIBUTING.md
+- New district / sub_district rows must set `prefix` correctly: Bangkok → `เขต`/`แขวง` (`Khet`/`Khwaeng`); other provinces → `อำเภอ`/`ตำบล` (`Amphoe`/`Tambon`). See the rules table in CONTRIBUTING.en.md
 
 ## History
 
