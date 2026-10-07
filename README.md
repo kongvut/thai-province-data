@@ -12,6 +12,8 @@
 > **v3.1** — `geography.name` เป็น nested `{th, en}` เช่นกัน (ทุก entity nested สอดคล้องกันแล้ว)
 > รายละเอียด + migration ที่ [CHANGELOG.md](CHANGELOG.md) · shape เก่าคงอยู่ที่ [api/v2/](api/v2/) และ [formats-v2/](formats-v2/)
 
+[![Demo cascade select จังหวัด → อำเภอ → ตำบล พร้อม postal code และ address ที่ resolve จาก API](docs/images/demo-cascade-select.png)](https://codesandbox.io/p/sandbox/thailand-province-demo-api-k3st7)
+
 ---
 
 ## โครงสร้าง
